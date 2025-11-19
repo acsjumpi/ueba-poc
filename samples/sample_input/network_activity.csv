@@ -1,0 +1,913 @@
+﻿ACTIVITY_NAME,ACTIVITY_ID,APP_NAME,CATEGORY_NAME,CATEGORY_UID,CLASS_NAME,CLASS_UID,CONNECTION_INFO,DST_ENDPOINT,DURATION,END_TIME,ENRICHMENTS,MESSAGE,METADATA,OBSERVABLES,SEVERITY,SEVERITY_ID,SRC_ENDPOINT,START_TIME,STATUS_CODE,STATUS_DETAIL,STATUS_ID,TLS,TIMEZONE_OFFSET,TRAFFIC,TYPE_UID,TYPE_NAME,URL,UNMAPPED,FILE_NAME,S3_FILE_TS,LOAD_TS,_COUNT,_TIME,_STATUS,EVENT_SIMPLENAME,SOURCE,_HOST,DEST_HOST,_ACTION,DEST_PORT,SRC_IP,DEST_IP,PROXY,EPOCH_TIME,FIREWALL_RULE,API,CLOUD,ACTOR,DEVICE,PROXY_CONNECTION_INFO,PROXY_ENDPOINT,PROXY_HTTP_REQUEST,PROXY_HTTP_RESPONSE,PROXY_TLS,PROXY_TRAFFIC,ACTION_ID,AUTHORIZATIONS,DISPOSITION,DISPOSITION_ID,ATTACKS,MALWARE,LOAD_BALANCER,CONTAINER,NAMESPACE_PID,DATA_CLASSIFICATION,AID,AIP,EVENT_TIME,_USER
+Traffic,6,ssl,Network Activity,4,Network Activity,4001,"{
+  ""direction"": ""Outbound"",
+  ""direction_id"": 2,
+  ""protocol_name"": ""tcp"",
+  ""session"": {
+    ""count"": 1,
+    ""expiration_reason"": ""tcp-rst-from-client"",
+    ""uid"": ""1551044""
+  }
+}","{
+  ""domain"": ""cgftdev.com"",
+  ""interface_name"": ""ethernet1/13.555"",
+  ""ip"": ""172.66.0.165"",
+  ""location"": {
+    ""country"": ""United States""
+  },
+  ""name"": ""snolab-fwm-pn3"",
+  ""port"": 443,
+  ""proxy_endpoint"": {
+    ""ip"": ""0.0.0.0"",
+    ""port"": 0
+  },
+  ""zone"": ""b-dmz.555""
+}",,,,,"{
+  ""lables"": [
+    ""pan_logs:thraffic:source::""
+  ],
+  ""log_provider"": ""pan:traffic"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host"",
+    ""Security Control""
+  ],
+  ""version"": ""1.2.0""
+}",,,,"{
+  ""interface_name"": ""ethernet1/14"",
+  ""ip"": ""172.17.215.70"",
+  ""owner"": ""cgftdev\\azinfbb00000021s001"",
+  ""port"": 57166,
+  ""proxy_endpoint"": {
+    ""ip"": ""0.0.0.0"",
+    ""port"": 0
+  },
+  ""zone"": ""b-trust""
+}",2025-10-06 08:06:11.000 -0700,,,1,,,"{
+  ""bytes"": 6170,
+  ""bytes_in"": 4875,
+  ""bytes_out"": 1295,
+  ""chunks"": 0,
+  ""chunks_in"": 0,
+  ""chunks_out"": 0,
+  ""packets"": 17,
+  ""packets_in"": 9,
+  ""packets_out"": 8
+}",400106,,,"{
+  ""actionsource"": ""from-policy"",
+  ""appflapcount"": 0,
+  ""devicegrouphierarchylevel1"": 97,
+  ""devicegrouphierarchylevel2"": 169,
+  ""devicegrouphierarchylevel3"": 301,
+  ""devicegrouphierarchylevel4"": 0,
+  ""elapsedtime"": ""0"",
+  ""flags"": ""0x47a"",
+  ""future_use1"": ""2817"",
+  ""http2connection"": 0,
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""repeatcount"": 1,
+  ""sctpassociationid"": ""0"",
+  ""sctpchunks"": ""0"",
+  ""sctpchunksreceived"": ""0"",
+  ""sctpchunkssent"": ""0"",
+  ""sequencenumber"": ""7548620677674672121"",
+  ""sourcelocation"": ""172.16.0.0-172.31.255.255"",
+  ""threat"": ""end"",
+  ""tunnelid"": ""0"",
+  ""type"": ""TRAFFIC"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWB""
+}",sirtdatalake/network_activity/network_activity/2025/10/06/15/pan_traffic/CriblOut-0iotNl.23.parquet,2025-10-06 15:11:23.000 -0700,2025-10-06 15:14:33.507 Z,,2025-10-06 08:06:26.000 -0700,Success,,pan:traffic,snolab-fwb-01-1,snolab-fwm-pn3,Traffic,443,172.17.215.70,172.66.0.165,,1759763186,"{
+  ""category"": ""computer-and-internet-info"",
+  ""name"": ""SNOT FWB Outbound Internet"",
+  ""uid"": ""9c535356-e6de-4002-a593-ff54a3174e0b""
+}",,,,"{
+  ""hw_info"": {
+    ""serial_number"": 24401002441
+  },
+  ""name"": ""snolab-fwb-01-1""
+}",,,,,,,1,,Allowed,1,,,,,,,,,2025-10-06 15:06:26.000,
+Traffic,6,ssl,Network Activity,4,Network Activity,4001,"{
+  ""direction"": ""Outbound"",
+  ""direction_id"": 2,
+  ""protocol_name"": ""tcp"",
+  ""session"": {
+    ""count"": 1,
+    ""expiration_reason"": ""tcp-rst-from-client"",
+    ""uid"": ""2089019""
+  }
+}","{
+  ""domain"": ""cgftdev.com"",
+  ""interface_name"": ""ethernet1/13"",
+  ""ip"": ""172.66.0.165"",
+  ""location"": {
+    ""country"": ""United States""
+  },
+  ""name"": ""snolab-fwm-pn3"",
+  ""port"": 443,
+  ""proxy_endpoint"": {
+    ""ip"": ""172.66.0.165"",
+    ""port"": 443
+  },
+  ""zone"": ""p-untrust""
+}",,,,,"{
+  ""lables"": [
+    ""pan_logs:thraffic:source::""
+  ],
+  ""log_provider"": ""pan:traffic"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host"",
+    ""Security Control""
+  ],
+  ""version"": ""1.2.0""
+}",,,,"{
+  ""interface_name"": ""ethernet1/14.555"",
+  ""ip"": ""172.17.215.70"",
+  ""port"": 47752,
+  ""proxy_endpoint"": {
+    ""ip"": ""148.107.3.141"",
+    ""port"": 2595
+  },
+  ""zone"": ""p-trust.555""
+}",2025-10-06 08:11:11.000 -0700,,,1,,,"{
+  ""bytes"": 6236,
+  ""bytes_in"": 4839,
+  ""bytes_out"": 1397,
+  ""chunks"": 0,
+  ""chunks_in"": 0,
+  ""chunks_out"": 0,
+  ""packets"": 18,
+  ""packets_in"": 9,
+  ""packets_out"": 9
+}",400106,,,"{
+  ""actionsource"": ""from-policy"",
+  ""appflapcount"": 0,
+  ""devicegrouphierarchylevel1"": 97,
+  ""devicegrouphierarchylevel2"": 12,
+  ""devicegrouphierarchylevel3"": 13,
+  ""devicegrouphierarchylevel4"": 0,
+  ""elapsedtime"": ""0"",
+  ""flags"": ""0x40047a"",
+  ""future_use1"": ""2817"",
+  ""http2connection"": 0,
+  ""logaction"": ""default"",
+  ""parentsessionid"": ""0"",
+  ""repeatcount"": 1,
+  ""sctpassociationid"": ""0"",
+  ""sctpchunks"": ""0"",
+  ""sctpchunksreceived"": ""0"",
+  ""sctpchunkssent"": ""0"",
+  ""sequencenumber"": ""7548634189556064347"",
+  ""sourcelocation"": ""172.16.0.0-172.31.255.255"",
+  ""threat"": ""end"",
+  ""tunnelid"": ""0"",
+  ""type"": ""TRAFFIC"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWP""
+}",sirtdatalake/network_activity/network_activity/2025/10/06/15/pan_traffic/CriblOut-JLb0cs.7.parquet,2025-10-06 15:21:29.000 -0700,2025-10-06 15:22:36.962 Z,,2025-10-06 08:11:26.000 -0700,Success,,pan:traffic,snolab-fwp-01-2,snolab-fwm-pn3,Traffic,443,172.17.215.70,172.66.0.165,,1759763486,"{
+  ""category"": ""computer-and-internet-info"",
+  ""name"": ""Outbound from FT"",
+  ""uid"": ""b9c2c386-fe17-459a-a672-0e4f06766201""
+}",,,,"{
+  ""hw_info"": {
+    ""serial_number"": 24401002191
+  },
+  ""name"": ""snolab-fwp-01-2""
+}",,,,,,,1,,Allowed,1,,,,,,,,,2025-10-06 15:11:26.000,
+Traffic,6,ssl,Network Activity,4,Network Activity,4001,"{
+  ""direction"": ""Outbound"",
+  ""direction_id"": 2,
+  ""protocol_name"": ""tcp"",
+  ""session"": {
+    ""count"": 1,
+    ""expiration_reason"": ""tcp-fin"",
+    ""uid"": ""2835803""
+  }
+}","{
+  ""domain"": ""cgftdev.com"",
+  ""interface_name"": ""ethernet1/13"",
+  ""ip"": ""162.159.140.167"",
+  ""location"": {
+    ""country"": ""United States""
+  },
+  ""name"": ""snolab-fwm-pn3"",
+  ""port"": 443,
+  ""proxy_endpoint"": {
+    ""ip"": ""162.159.140.167"",
+    ""port"": 443
+  },
+  ""zone"": ""p-untrust""
+}",,,,,"{
+  ""lables"": [
+    ""pan_logs:thraffic:source::""
+  ],
+  ""log_provider"": ""pan:traffic"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host"",
+    ""Security Control""
+  ],
+  ""version"": ""1.2.0""
+}",,,,"{
+  ""interface_name"": ""ethernet1/14.555"",
+  ""ip"": ""172.17.215.70"",
+  ""port"": 51466,
+  ""proxy_endpoint"": {
+    ""ip"": ""148.107.3.141"",
+    ""port"": 57256
+  },
+  ""zone"": ""p-trust.555""
+}",2025-10-06 08:00:57.000 -0700,,,1,,,"{
+  ""bytes"": 6116,
+  ""bytes_in"": 4126,
+  ""bytes_out"": 1990,
+  ""chunks"": 0,
+  ""chunks_in"": 0,
+  ""chunks_out"": 0,
+  ""packets"": 18,
+  ""packets_in"": 8,
+  ""packets_out"": 10
+}",400106,,,"{
+  ""actionsource"": ""from-policy"",
+  ""appflapcount"": 0,
+  ""devicegrouphierarchylevel1"": 97,
+  ""devicegrouphierarchylevel2"": 12,
+  ""devicegrouphierarchylevel3"": 13,
+  ""devicegrouphierarchylevel4"": 0,
+  ""elapsedtime"": ""0"",
+  ""flags"": ""0x40047a"",
+  ""future_use1"": ""2817"",
+  ""http2connection"": 0,
+  ""logaction"": ""default"",
+  ""parentsessionid"": ""0"",
+  ""repeatcount"": 1,
+  ""sctpassociationid"": ""0"",
+  ""sctpchunks"": ""0"",
+  ""sctpchunksreceived"": ""0"",
+  ""sctpchunkssent"": ""0"",
+  ""sequencenumber"": ""7548634189555995157"",
+  ""sourcelocation"": ""172.16.0.0-172.31.255.255"",
+  ""threat"": ""end"",
+  ""tunnelid"": ""0"",
+  ""type"": ""TRAFFIC"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWP""
+}",sirtdatalake/network_activity/network_activity/2025/10/06/15/pan_traffic/CriblOut-ttxrfV.5.parquet,2025-10-06 15:11:26.000 -0700,2025-10-06 15:14:12.326 Z,,2025-10-06 08:01:12.000 -0700,Success,,pan:traffic,snolab-fwp-01-2,snolab-fwm-pn3,Traffic,443,172.17.215.70,162.159.140.167,,1759762872,"{
+  ""category"": ""computer-and-internet-info"",
+  ""name"": ""Outbound from FT"",
+  ""uid"": ""b9c2c386-fe17-459a-a672-0e4f06766201""
+}",,,,"{
+  ""hw_info"": {
+    ""serial_number"": 24401002191
+  },
+  ""name"": ""snolab-fwp-01-2""
+}",,,,,,,1,,Allowed,1,,,,,,,,,2025-10-06 15:01:12.000,
+Traffic,6,ssl,Network Activity,4,Network Activity,4001,"{
+  ""direction"": ""Outbound"",
+  ""direction_id"": 2,
+  ""protocol_name"": ""tcp"",
+  ""session"": {
+    ""count"": 1,
+    ""expiration_reason"": ""tcp-rst-from-client"",
+    ""uid"": ""1582067""
+  }
+}","{
+  ""domain"": ""cgftdev.com"",
+  ""interface_name"": ""ethernet1/13.555"",
+  ""ip"": ""162.159.140.167"",
+  ""location"": {
+    ""country"": ""United States""
+  },
+  ""name"": ""snolab-fwm-pn3"",
+  ""port"": 443,
+  ""proxy_endpoint"": {
+    ""ip"": ""0.0.0.0"",
+    ""port"": 0
+  },
+  ""zone"": ""b-dmz.555""
+}",,,,,"{
+  ""lables"": [
+    ""pan_logs:thraffic:source::""
+  ],
+  ""log_provider"": ""pan:traffic"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host"",
+    ""Security Control""
+  ],
+  ""version"": ""1.2.0""
+}",,,,"{
+  ""interface_name"": ""ethernet1/14"",
+  ""ip"": ""172.17.215.70"",
+  ""owner"": ""cgftdev\\ucadintsrv"",
+  ""port"": 60392,
+  ""proxy_endpoint"": {
+    ""ip"": ""0.0.0.0"",
+    ""port"": 0
+  },
+  ""zone"": ""b-trust""
+}",2025-10-06 08:08:21.000 -0700,,,1,,,"{
+  ""bytes"": 6314,
+  ""bytes_in"": 4875,
+  ""bytes_out"": 1439,
+  ""chunks"": 0,
+  ""chunks_in"": 0,
+  ""chunks_out"": 0,
+  ""packets"": 19,
+  ""packets_in"": 9,
+  ""packets_out"": 10
+}",400106,,,"{
+  ""actionsource"": ""from-policy"",
+  ""appflapcount"": 0,
+  ""devicegrouphierarchylevel1"": 97,
+  ""devicegrouphierarchylevel2"": 169,
+  ""devicegrouphierarchylevel3"": 301,
+  ""devicegrouphierarchylevel4"": 0,
+  ""elapsedtime"": ""1"",
+  ""flags"": ""0x47a"",
+  ""future_use1"": ""2817"",
+  ""http2connection"": 0,
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""repeatcount"": 1,
+  ""sctpassociationid"": ""0"",
+  ""sctpchunks"": ""0"",
+  ""sctpchunksreceived"": ""0"",
+  ""sctpchunkssent"": ""0"",
+  ""sequencenumber"": ""7548620677674693379"",
+  ""sourcelocation"": ""172.16.0.0-172.31.255.255"",
+  ""threat"": ""end"",
+  ""tunnelid"": ""0"",
+  ""type"": ""TRAFFIC"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWB""
+}",sirtdatalake/network_activity/network_activity/2025/10/06/15/pan_traffic/CriblOut-OmGzUH.7.parquet,2025-10-06 15:11:40.000 -0700,2025-10-06 15:16:38.444 Z,,2025-10-06 08:08:37.000 -0700,Success,,pan:traffic,snolab-fwb-01-1,snolab-fwm-pn3,Traffic,443,172.17.215.70,162.159.140.167,,1759763317,"{
+  ""category"": ""computer-and-internet-info"",
+  ""name"": ""SNOT FWB Outbound Internet"",
+  ""uid"": ""9c535356-e6de-4002-a593-ff54a3174e0b""
+}",,,,"{
+  ""hw_info"": {
+    ""serial_number"": 24401002441
+  },
+  ""name"": ""snolab-fwb-01-1""
+}",,,,,,,1,,Allowed,1,,,,,,,,,2025-10-06 15:08:37.000,
+Traffic,6,ssl,Network Activity,4,Network Activity,4001,"{
+  ""direction"": ""Outbound"",
+  ""direction_id"": 2,
+  ""protocol_name"": ""tcp"",
+  ""session"": {
+    ""count"": 1,
+    ""expiration_reason"": ""tcp-rst-from-client"",
+    ""uid"": ""2789435""
+  }
+}","{
+  ""domain"": ""cgftdev.com"",
+  ""interface_name"": ""ethernet1/13"",
+  ""ip"": ""172.66.0.165"",
+  ""location"": {
+    ""country"": ""United States""
+  },
+  ""name"": ""snolab-fwm-pn3"",
+  ""port"": 443,
+  ""proxy_endpoint"": {
+    ""ip"": ""172.66.0.165"",
+    ""port"": 443
+  },
+  ""zone"": ""p-untrust""
+}",,,,,"{
+  ""lables"": [
+    ""pan_logs:thraffic:source::""
+  ],
+  ""log_provider"": ""pan:traffic"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host"",
+    ""Security Control""
+  ],
+  ""version"": ""1.2.0""
+}",,,,"{
+  ""interface_name"": ""ethernet1/14.555"",
+  ""ip"": ""172.17.215.70"",
+  ""port"": 41878,
+  ""proxy_endpoint"": {
+    ""ip"": ""148.107.3.141"",
+    ""port"": 20724
+  },
+  ""zone"": ""p-trust.555""
+}",2025-10-06 08:01:11.000 -0700,,,1,,,"{
+  ""bytes"": 6236,
+  ""bytes_in"": 4839,
+  ""bytes_out"": 1397,
+  ""chunks"": 0,
+  ""chunks_in"": 0,
+  ""chunks_out"": 0,
+  ""packets"": 18,
+  ""packets_in"": 9,
+  ""packets_out"": 9
+}",400106,,,"{
+  ""actionsource"": ""from-policy"",
+  ""appflapcount"": 0,
+  ""devicegrouphierarchylevel1"": 97,
+  ""devicegrouphierarchylevel2"": 12,
+  ""devicegrouphierarchylevel3"": 13,
+  ""devicegrouphierarchylevel4"": 0,
+  ""elapsedtime"": ""0"",
+  ""flags"": ""0x40047a"",
+  ""future_use1"": ""2817"",
+  ""http2connection"": 0,
+  ""logaction"": ""default"",
+  ""parentsessionid"": ""0"",
+  ""repeatcount"": 1,
+  ""sctpassociationid"": ""0"",
+  ""sctpchunks"": ""0"",
+  ""sctpchunksreceived"": ""0"",
+  ""sctpchunkssent"": ""0"",
+  ""sequencenumber"": ""7548634189555996784"",
+  ""sourcelocation"": ""172.16.0.0-172.31.255.255"",
+  ""threat"": ""end"",
+  ""tunnelid"": ""0"",
+  ""type"": ""TRAFFIC"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWP""
+}",sirtdatalake/network_activity/network_activity/2025/10/06/15/pan_traffic/CriblOut-vCigcZ.21.parquet,2025-10-06 15:11:25.000 -0700,2025-10-06 15:14:24.421 Z,,2025-10-06 08:01:26.000 -0700,Success,,pan:traffic,snolab-fwp-01-2,snolab-fwm-pn3,Traffic,443,172.17.215.70,172.66.0.165,,1759762886,"{
+  ""category"": ""computer-and-internet-info"",
+  ""name"": ""Outbound from FT"",
+  ""uid"": ""b9c2c386-fe17-459a-a672-0e4f06766201""
+}",,,,"{
+  ""hw_info"": {
+    ""serial_number"": 24401002191
+  },
+  ""name"": ""snolab-fwp-01-2""
+}",,,,,,,1,,Allowed,1,,,,,,,,,2025-10-06 15:01:26.000,
+Traffic,6,ntp-base,Network Activity,4,Network Activity,4001,"{
+  ""direction"": ""Lateral"",
+  ""direction_id"": 3,
+  ""protocol_name"": ""udp"",
+  ""session"": {
+    ""count"": 1,
+    ""expiration_reason"": ""aged-out"",
+    ""uid"": ""2132728""
+  }
+}","{
+  ""domain"": ""capgroup.com"",
+  ""interface_name"": ""ethernet1/14"",
+  ""ip"": ""10.16.5.186"",
+  ""location"": {
+    ""country"": ""10.0.0.0-10.255.255.255""
+  },
+  ""name"": ""asx1-fwm-pn4"",
+  ""port"": 123,
+  ""proxy_endpoint"": {
+    ""ip"": ""0.0.0.0"",
+    ""port"": 0
+  },
+  ""zone"": ""fwl-trust""
+}",,,,,"{
+  ""lables"": [
+    ""pan_logs:thraffic:source::""
+  ],
+  ""log_provider"": ""pan:traffic"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host"",
+    ""Security Control""
+  ],
+  ""version"": ""1.2.0""
+}",,,,"{
+  ""interface_name"": ""ethernet1/13"",
+  ""ip"": ""172.17.215.70"",
+  ""port"": 123,
+  ""proxy_endpoint"": {
+    ""ip"": ""0.0.0.0"",
+    ""port"": 0
+  },
+  ""zone"": ""fwl-untrust""
+}",2025-10-06 08:01:23.000 -0700,,,1,,,"{
+  ""bytes"": 180,
+  ""bytes_in"": 90,
+  ""bytes_out"": 90,
+  ""chunks"": 0,
+  ""chunks_in"": 0,
+  ""chunks_out"": 0,
+  ""packets"": 2,
+  ""packets_in"": 1,
+  ""packets_out"": 1
+}",400106,,,"{
+  ""actionsource"": ""from-policy"",
+  ""appflapcount"": 0,
+  ""devicegrouphierarchylevel1"": 3455,
+  ""devicegrouphierarchylevel2"": 3457,
+  ""devicegrouphierarchylevel3"": 0,
+  ""devicegrouphierarchylevel4"": 0,
+  ""elapsedtime"": ""0"",
+  ""flags"": ""0x7a"",
+  ""future_use1"": ""2817"",
+  ""http2connection"": 0,
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""packetsent"": ""1"",
+  ""packetsreceived"": ""1"",
+  ""parentsessionid"": ""0"",
+  ""repeatcount"": 1,
+  ""sctpassociationid"": ""0"",
+  ""sctpchunks"": ""0"",
+  ""sctpchunksreceived"": ""0"",
+  ""sctpchunkssent"": ""0"",
+  ""sequencenumber"": ""7554219537009359859"",
+  ""sourcelocation"": ""172.16.0.0-172.31.255.255"",
+  ""threat"": ""end"",
+  ""tunnelid"": ""0"",
+  ""type"": ""TRAFFIC"",
+  ""virtualsystem"": ""vsys1""
+}",sirtdatalake/network_activity/network_activity/2025/10/06/15/pan_traffic/CriblOut-raF83e.10.parquet,2025-10-06 15:11:24.000 -0700,2025-10-06 15:16:11.855 Z,,2025-10-06 08:01:54.000 -0700,Success,,pan:traffic,snolab-fwl-01-1,asx1-fwm-pn4,Traffic,123,172.17.215.70,10.16.5.186,,1759762914,"{
+  ""category"": ""any"",
+  ""name"": ""Allow FT to Prod and OZ Any"",
+  ""uid"": ""e7a8c2b9-777e-41ce-ba32-6b8292eab46a""
+}",,,,"{
+  ""hw_info"": {
+    ""serial_number"": 24201003526
+  },
+  ""name"": ""snolab-fwl-01-1""
+}",,,,,,,1,,Allowed,1,,,,,,,,,2025-10-06 15:01:54.000,
+Traffic,6,ssl,Network Activity,4,Network Activity,4001,"{
+  ""direction"": ""Outbound"",
+  ""direction_id"": 2,
+  ""protocol_name"": ""tcp"",
+  ""session"": {
+    ""count"": 1,
+    ""expiration_reason"": ""tcp-fin"",
+    ""uid"": ""1537729""
+  }
+}","{
+  ""domain"": ""cgftdev.com"",
+  ""interface_name"": ""ethernet1/13.555"",
+  ""ip"": ""162.159.140.167"",
+  ""location"": {
+    ""country"": ""United States""
+  },
+  ""name"": ""snolab-fwm-pn3"",
+  ""port"": 443,
+  ""proxy_endpoint"": {
+    ""ip"": ""0.0.0.0"",
+    ""port"": 0
+  },
+  ""zone"": ""b-dmz.555""
+}",,,,,"{
+  ""lables"": [
+    ""pan_logs:thraffic:source::""
+  ],
+  ""log_provider"": ""pan:traffic"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host"",
+    ""Security Control""
+  ],
+  ""version"": ""1.2.0""
+}",,,,"{
+  ""interface_name"": ""ethernet1/14"",
+  ""ip"": ""172.17.215.70"",
+  ""owner"": ""cgftdev\\azinfbb00000021s001"",
+  ""port"": 51466,
+  ""proxy_endpoint"": {
+    ""ip"": ""0.0.0.0"",
+    ""port"": 0
+  },
+  ""zone"": ""b-trust""
+}",2025-10-06 08:00:56.000 -0700,,,1,,,"{
+  ""bytes"": 6108,
+  ""bytes_in"": 4158,
+  ""bytes_out"": 1950,
+  ""chunks"": 0,
+  ""chunks_in"": 0,
+  ""chunks_out"": 0,
+  ""packets"": 18,
+  ""packets_in"": 8,
+  ""packets_out"": 10
+}",400106,,,"{
+  ""actionsource"": ""from-policy"",
+  ""appflapcount"": 0,
+  ""devicegrouphierarchylevel1"": 97,
+  ""devicegrouphierarchylevel2"": 169,
+  ""devicegrouphierarchylevel3"": 301,
+  ""devicegrouphierarchylevel4"": 0,
+  ""elapsedtime"": ""1"",
+  ""flags"": ""0x47a"",
+  ""future_use1"": ""2817"",
+  ""http2connection"": 0,
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""repeatcount"": 1,
+  ""sctpassociationid"": ""0"",
+  ""sctpchunks"": ""0"",
+  ""sctpchunksreceived"": ""0"",
+  ""sctpchunkssent"": ""0"",
+  ""sequencenumber"": ""7548620677674621215"",
+  ""sourcelocation"": ""172.16.0.0-172.31.255.255"",
+  ""threat"": ""end"",
+  ""tunnelid"": ""0"",
+  ""type"": ""TRAFFIC"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWB""
+}",sirtdatalake/network_activity/network_activity/2025/10/06/15/pan_traffic/CriblOut-9jNmDP.24.parquet,2025-10-06 15:11:27.000 -0700,2025-10-06 15:15:21.378 Z,,2025-10-06 08:01:12.000 -0700,Success,,pan:traffic,snolab-fwb-01-1,snolab-fwm-pn3,Traffic,443,172.17.215.70,162.159.140.167,,1759762872,"{
+  ""category"": ""computer-and-internet-info"",
+  ""name"": ""SNOT FWB Outbound Internet"",
+  ""uid"": ""9c535356-e6de-4002-a593-ff54a3174e0b""
+}",,,,"{
+  ""hw_info"": {
+    ""serial_number"": 24401002441
+  },
+  ""name"": ""snolab-fwb-01-1""
+}",,,,,,,1,,Allowed,1,,,,,,,,,2025-10-06 15:01:12.000,
+Traffic,6,ssl,Network Activity,4,Network Activity,4001,"{
+  ""direction"": ""Outbound"",
+  ""direction_id"": 2,
+  ""protocol_name"": ""tcp"",
+  ""session"": {
+    ""count"": 1,
+    ""expiration_reason"": ""tcp-fin"",
+    ""uid"": ""2856821""
+  }
+}","{
+  ""domain"": ""cgftdev.com"",
+  ""interface_name"": ""ethernet1/13"",
+  ""ip"": ""162.159.140.167"",
+  ""location"": {
+    ""country"": ""United States""
+  },
+  ""name"": ""snolab-fwm-pn3"",
+  ""port"": 443,
+  ""proxy_endpoint"": {
+    ""ip"": ""162.159.140.167"",
+    ""port"": 443
+  },
+  ""zone"": ""p-untrust""
+}",,,,,"{
+  ""lables"": [
+    ""pan_logs:thraffic:source::""
+  ],
+  ""log_provider"": ""pan:traffic"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host"",
+    ""Security Control""
+  ],
+  ""version"": ""1.2.0""
+}",,,,"{
+  ""interface_name"": ""ethernet1/14.555"",
+  ""ip"": ""172.17.215.70"",
+  ""port"": 60396,
+  ""proxy_endpoint"": {
+    ""ip"": ""148.107.3.141"",
+    ""port"": 48455
+  },
+  ""zone"": ""p-trust.555""
+}",2025-10-06 08:08:22.000 -0700,,,1,,,"{
+  ""bytes"": 6669,
+  ""bytes_in"": 5215,
+  ""bytes_out"": 1454,
+  ""chunks"": 0,
+  ""chunks_in"": 0,
+  ""chunks_out"": 0,
+  ""packets"": 17,
+  ""packets_in"": 8,
+  ""packets_out"": 9
+}",400106,,,"{
+  ""actionsource"": ""from-policy"",
+  ""appflapcount"": 0,
+  ""devicegrouphierarchylevel1"": 97,
+  ""devicegrouphierarchylevel2"": 12,
+  ""devicegrouphierarchylevel3"": 13,
+  ""devicegrouphierarchylevel4"": 0,
+  ""elapsedtime"": ""0"",
+  ""flags"": ""0x40047a"",
+  ""future_use1"": ""2817"",
+  ""http2connection"": 0,
+  ""logaction"": ""default"",
+  ""parentsessionid"": ""0"",
+  ""repeatcount"": 1,
+  ""sctpassociationid"": ""0"",
+  ""sctpchunks"": ""0"",
+  ""sctpchunksreceived"": ""0"",
+  ""sctpchunkssent"": ""0"",
+  ""sequencenumber"": ""7548634189556044223"",
+  ""sourcelocation"": ""172.16.0.0-172.31.255.255"",
+  ""threat"": ""end"",
+  ""tunnelid"": ""0"",
+  ""type"": ""TRAFFIC"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWP""
+}",sirtdatalake/network_activity/network_activity/2025/10/06/15/pan_traffic/CriblOut-8CcS8f.19.parquet,2025-10-06 15:11:26.000 -0700,2025-10-06 15:15:25.549 Z,,2025-10-06 08:08:37.000 -0700,Success,,pan:traffic,snolab-fwp-01-2,snolab-fwm-pn3,Traffic,443,172.17.215.70,162.159.140.167,,1759763317,"{
+  ""category"": ""computer-and-internet-info"",
+  ""name"": ""Outbound from FT"",
+  ""uid"": ""b9c2c386-fe17-459a-a672-0e4f06766201""
+}",,,,"{
+  ""hw_info"": {
+    ""serial_number"": 24401002191
+  },
+  ""name"": ""snolab-fwp-01-2""
+}",,,,,,,1,,Allowed,1,,,,,,,,,2025-10-06 15:08:37.000,
+Traffic,6,ssl,Network Activity,4,Network Activity,4001,"{
+  ""direction"": ""Outbound"",
+  ""direction_id"": 2,
+  ""protocol_name"": ""tcp"",
+  ""session"": {
+    ""count"": 1,
+    ""expiration_reason"": ""tcp-rst-from-client"",
+    ""uid"": ""2633284""
+  }
+}","{
+  ""domain"": ""cgftdev.com"",
+  ""interface_name"": ""ethernet1/13"",
+  ""ip"": ""172.66.0.165"",
+  ""location"": {
+    ""country"": ""United States""
+  },
+  ""name"": ""snolab-fwm-pn3"",
+  ""port"": 443,
+  ""proxy_endpoint"": {
+    ""ip"": ""172.66.0.165"",
+    ""port"": 443
+  },
+  ""zone"": ""p-untrust""
+}",,,,,"{
+  ""lables"": [
+    ""pan_logs:thraffic:source::""
+  ],
+  ""log_provider"": ""pan:traffic"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host"",
+    ""Security Control""
+  ],
+  ""version"": ""1.2.0""
+}",,,,"{
+  ""interface_name"": ""ethernet1/14.555"",
+  ""ip"": ""172.17.215.70"",
+  ""port"": 57166,
+  ""proxy_endpoint"": {
+    ""ip"": ""148.107.3.141"",
+    ""port"": 20349
+  },
+  ""zone"": ""p-trust.555""
+}",2025-10-06 08:06:11.000 -0700,,,1,,,"{
+  ""bytes"": 6166,
+  ""bytes_in"": 4839,
+  ""bytes_out"": 1327,
+  ""chunks"": 0,
+  ""chunks_in"": 0,
+  ""chunks_out"": 0,
+  ""packets"": 17,
+  ""packets_in"": 9,
+  ""packets_out"": 8
+}",400106,,,"{
+  ""actionsource"": ""from-policy"",
+  ""appflapcount"": 0,
+  ""devicegrouphierarchylevel1"": 97,
+  ""devicegrouphierarchylevel2"": 12,
+  ""devicegrouphierarchylevel3"": 13,
+  ""devicegrouphierarchylevel4"": 0,
+  ""elapsedtime"": ""0"",
+  ""flags"": ""0x40047a"",
+  ""future_use1"": ""2817"",
+  ""http2connection"": 0,
+  ""logaction"": ""default"",
+  ""parentsessionid"": ""0"",
+  ""repeatcount"": 1,
+  ""sctpassociationid"": ""0"",
+  ""sctpchunks"": ""0"",
+  ""sctpchunksreceived"": ""0"",
+  ""sctpchunkssent"": ""0"",
+  ""sequencenumber"": ""7548634189556029760"",
+  ""sourcelocation"": ""172.16.0.0-172.31.255.255"",
+  ""threat"": ""end"",
+  ""tunnelid"": ""0"",
+  ""type"": ""TRAFFIC"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWP""
+}",sirtdatalake/network_activity/network_activity/2025/10/06/15/pan_traffic/CriblOut-7SHKKz.29.parquet,2025-10-06 15:11:40.000 -0700,2025-10-06 15:16:22.361 Z,,2025-10-06 08:06:26.000 -0700,Success,,pan:traffic,snolab-fwp-01-2,snolab-fwm-pn3,Traffic,443,172.17.215.70,172.66.0.165,,1759763186,"{
+  ""category"": ""computer-and-internet-info"",
+  ""name"": ""Outbound from FT"",
+  ""uid"": ""b9c2c386-fe17-459a-a672-0e4f06766201""
+}",,,,"{
+  ""hw_info"": {
+    ""serial_number"": 24401002191
+  },
+  ""name"": ""snolab-fwp-01-2""
+}",,,,,,,1,,Allowed,1,,,,,,,,,2025-10-06 15:06:26.000,
+Traffic,6,ssl,Network Activity,4,Network Activity,4001,"{
+  ""direction"": ""Outbound"",
+  ""direction_id"": 2,
+  ""protocol_name"": ""tcp"",
+  ""session"": {
+    ""count"": 1,
+    ""expiration_reason"": ""tcp-fin"",
+    ""uid"": ""2720305""
+  }
+}","{
+  ""domain"": ""cgftdev.com"",
+  ""interface_name"": ""ethernet1/13"",
+  ""ip"": ""162.159.140.167"",
+  ""location"": {
+    ""country"": ""United States""
+  },
+  ""name"": ""snolab-fwm-pn3"",
+  ""port"": 443,
+  ""proxy_endpoint"": {
+    ""ip"": ""162.159.140.167"",
+    ""port"": 443
+  },
+  ""zone"": ""p-untrust""
+}",,,,,"{
+  ""lables"": [
+    ""pan_logs:thraffic:source::""
+  ],
+  ""log_provider"": ""pan:traffic"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host"",
+    ""Security Control""
+  ],
+  ""version"": ""1.2.0""
+}",,,,"{
+  ""interface_name"": ""ethernet1/14.555"",
+  ""ip"": ""172.17.215.70"",
+  ""port"": 60394,
+  ""proxy_endpoint"": {
+    ""ip"": ""148.107.3.141"",
+    ""port"": 6343
+  },
+  ""zone"": ""p-trust.555""
+}",2025-10-06 08:08:22.000 -0700,,,1,,,"{
+  ""bytes"": 6744,
+  ""bytes_in"": 5292,
+  ""bytes_out"": 1452,
+  ""chunks"": 0,
+  ""chunks_in"": 0,
+  ""chunks_out"": 0,
+  ""packets"": 17,
+  ""packets_in"": 8,
+  ""packets_out"": 9
+}",400106,,,"{
+  ""actionsource"": ""from-policy"",
+  ""appflapcount"": 0,
+  ""devicegrouphierarchylevel1"": 97,
+  ""devicegrouphierarchylevel2"": 12,
+  ""devicegrouphierarchylevel3"": 13,
+  ""devicegrouphierarchylevel4"": 0,
+  ""elapsedtime"": ""0"",
+  ""flags"": ""0x40047a"",
+  ""future_use1"": ""2817"",
+  ""http2connection"": 0,
+  ""logaction"": ""default"",
+  ""parentsessionid"": ""0"",
+  ""repeatcount"": 1,
+  ""sctpassociationid"": ""0"",
+  ""sctpchunks"": ""0"",
+  ""sctpchunksreceived"": ""0"",
+  ""sctpchunkssent"": ""0"",
+  ""sequencenumber"": ""7548634189556044256"",
+  ""sourcelocation"": ""172.16.0.0-172.31.255.255"",
+  ""threat"": ""end"",
+  ""tunnelid"": ""0"",
+  ""type"": ""TRAFFIC"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWP""
+}",sirtdatalake/network_activity/network_activity/2025/10/06/15/pan_traffic/CriblOut-FxUIiG.28.parquet,2025-10-06 15:11:23.000 -0700,2025-10-06 15:14:52.420 Z,,2025-10-06 08:08:37.000 -0700,Success,,pan:traffic,snolab-fwp-01-2,snolab-fwm-pn3,Traffic,443,172.17.215.70,162.159.140.167,,1759763317,"{
+  ""category"": ""computer-and-internet-info"",
+  ""name"": ""Outbound from FT"",
+  ""uid"": ""b9c2c386-fe17-459a-a672-0e4f06766201""
+}",,,,"{
+  ""hw_info"": {
+    ""serial_number"": 24401002191
+  },
+  ""name"": ""snolab-fwp-01-2""
+}",,,,,,,1,,Allowed,1,,,,,,,,,2025-10-06 15:08:37.000,

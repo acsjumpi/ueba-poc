@@ -1,0 +1,1036 @@
+﻿ACTIVITY_NAME,ACTIVITY_ID,ACTOR,ACTUAL_PERMISSIONS,CATEGORY_NAME,CATEGORY_UID,CLASS_NAME,CLASS_UID,DEVICE,DURATION,END_TIME,ENRICHMENTS,EXIT_CODE,INJECTION_TYPE,INJECTION_TYPE_ID,MESSAGE,METADATA,MODULE,OBSERVABLES,PROCESS,REQUESTED_PERMISSIONS,SEVERITY,SEVERITY_ID,START_TIME,STATUS_CODE,STATUS_DETAIL,STATUS_ID,TIMEZONE_OFFSET,TYPE_UID,TYPE_NAME,UNMAPPED,FILE_NAME,S3_FILE_TS,LOAD_TS,_COUNT,_TIME,_STATUS,EVENT_SIMPLENAME,EPOCH_TIME,SOURCE,PROCESS_CMD_LINE,PROCESS_PATH,EVENT_PLATFORM,PROCESS_NAME,_HOST,_USER,USER_ID,PROCESS_HASH,PROCESS_TREE,PARENT_PROCESS_NAME,EVENT_TIME,MD5_HASH,SHA256_HASH,API,CLOUD,ACTION_ID,AUTHORIZATIONS,DISPOSITION,DISPOSITION_ID,FIREWALL_RULE,ATTACKS,MALWARE,DATA_CLASSIFICATION,CONTAINER,NAMESPACE_PID,IMPHASH,BIN_TIME,_ACTION
+Launch,1,"{
+  ""process"": {
+    ""pid"": 30937339731297,
+    ""tid"": 705982980839525
+  },
+  ""user"": {
+    ""name"": ""SECURITY_LOCAL_SYSTEM_RID"",
+    ""uid"": ""S-1-5-18""
+  }
+}",,System Activity,1,Process Activity,1007,"{
+  ""agent_list"": [
+    {
+      ""name"": ""Falcon"",
+      ""type"": ""Endpoint Detection and Response"",
+      ""type_id"": 1,
+      ""uid"": ""e47e99d336b74e4db4be1384e5c3d740"",
+      ""vendor_name"": ""Crowdstrike""
+    }
+  ],
+  ""domain"": ""cguser.capgroup.com"",
+  ""first_seen_time"": ""1702680548.0"",
+  ""interface_uid"": ""c5d53d1af5664433ba968b7afbdf08cc"",
+  ""ip"": ""148.107.11.20"",
+  ""name"": ""D0213069"",
+  ""network_interfaces"": [
+    {
+      ""ip"": ""10.17.40.136""
+    }
+  ],
+  ""os"": {
+    ""name"": ""Win""
+  },
+  ""public_ip"": ""148.107.11.20""
+}",,,,,,,,"{
+  ""labels"": [
+    ""s3://cs-prod-cannon-0ad38c137b9582dc/data/2be5d586-9ef7-4e78-a22f-7b570ef19dd1/part-00002.gz""
+  ],
+  ""log_provider"": ""ProcessRollup2"",
+  ""process_time"": 1.762474817766000e+09,
+  ""product"": {
+    ""name"": ""FDR"",
+    ""version"": ""1007.3.0020008.15""
+  },
+  ""profiles"": [
+    ""OSINT""
+  ],
+  ""uid"": ""489842e2-c510-4343-b868-bde3e3aa862a"",
+  ""version"": ""1.2.0""
+}",,,"{
+  ""cmd_line"": ""\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1"",
+  ""created_time"": ""1762474041.881"",
+  ""file"": {
+    ""hashes"": [
+      {
+        ""algorithm"": ""MD5"",
+        ""algorithm_id"": 1,
+        ""value"": ""6fa132ce08da3ce1d39d178b55a32c5f""
+      },
+      {
+        ""algorithm"": ""SHA-256"",
+        ""algorithm_id"": 3,
+        ""value"": ""9326e22d619ce662b6a585d02947537f844a280645f22674dd3b8a47dfff094a""
+      },
+      null
+    ],
+    ""name"": ""conhost.exe"",
+    ""path"": ""\\Device\\HarddiskVolume4\\Windows\\System32\\conhost.exe""
+  },
+  ""name"": ""Console Windows Host"",
+  ""parent_process"": {
+    ""name"": ""Tachyon.Performance.Metrics.exe"",
+    ""pid"": 30937339731297,
+    ""xattributes"": {
+      ""ParentAuthenticationId"": 999
+    }
+  },
+  ""pid"": 30937341193837,
+  ""session"": null,
+  ""xattributes"": {
+    ""AuthenticationId"": 999,
+    ""RawProcessId"": 4576
+  }
+}",,,,,,,,,100701,Process Activity: Launch,"{
+  ""Attacks"": [
+    {
+      ""Tactic"": ""Execution"",
+      ""Technique"": ""User Execution""
+    }
+  ],
+  ""AuthenticodeHashData"": ""b1a5741396ab94077e669cdb655c85f68efaa3f8"",
+  ""ConfigStateHash"": ""5645076"",
+  ""EffectiveTransmissionClass"": ""3"",
+  ""Entitlements"": ""15"",
+  ""EventOrigin"": ""1"",
+  ""ImageSubsystem"": ""2"",
+  ""IntegrityLevel"": ""16384"",
+  ""SessionId"": ""0"",
+  ""SignInfoFlags"": ""8683538"",
+  ""Tags"": ""27, 29, 41, 874, 924, 12094627905582, 12094627906234"",
+  ""TokenType"": ""1"",
+  ""cribl_host"": ""x635543"",
+  ""name"": ""ProcessRollup2V19""
+}",sirtdatalake/system_activity/process_activity/2025/11/07/00/ProcessRollup2/CriblOut-ff4FPQ.6.parquet,2025-11-07 00:20:41.000 -0800,2025-11-07 00:21:48.813 Z,,2025-11-07 00:07:22.404 Z,,ProcessRollup2,1762474042,ProcessRollup2,\??\C:\WINDOWS\system32\conhost.exe 0xffffffff -ForceV1,\Device\HarddiskVolume4\Windows\System32\conhost.exe,Win,conhost.exe,D0213069,SECURITY_LOCAL_SYSTEM_RID,,"[{""algorithm"":""MD5"",""algorithm_id"":1,""value"":""6fa132ce08da3ce1d39d178b55a32c5f""},{""algorithm"":""SHA-256"",""algorithm_id"":3,""value"":""9326e22d619ce662b6a585d02947537f844a280645f22674dd3b8a47dfff094a""},null]",,Tachyon.Performance.Metrics.exe,2025-11-07 00:07:22.404,6fa132ce08da3ce1d39d178b55a32c5f,9326e22d619ce662b6a585d02947537f844a280645f22674dd3b8a47dfff094a,,,,,,,,,,,,,,2025-11-07 00:07:22.404,Launch
+Launch,1,"{
+  ""process"": {
+    ""pid"": 24928931980925,
+    ""tid"": 638912301093115
+  },
+  ""user"": {
+    ""name"": ""SECURITY_LOCAL_SYSTEM_RID"",
+    ""uid"": ""S-1-5-18""
+  }
+}",,System Activity,1,Process Activity,1007,"{
+  ""agent_list"": [
+    {
+      ""name"": ""Falcon"",
+      ""type"": ""Endpoint Detection and Response"",
+      ""type_id"": 1,
+      ""uid"": ""98ea21a935ce4e3495e95a45e1dba0d5"",
+      ""vendor_name"": ""Crowdstrike""
+    }
+  ],
+  ""domain"": ""cguser.capgroup.com"",
+  ""first_seen_time"": ""1707160202.0"",
+  ""interface_uid"": ""c5d53d1af5664433ba968b7afbdf08cc"",
+  ""ip"": ""165.225.242.89"",
+  ""name"": ""D0239506"",
+  ""network_interfaces"": [
+    {
+      ""ip"": ""10.73.9.77""
+    }
+  ],
+  ""os"": {
+    ""name"": ""Win""
+  },
+  ""public_ip"": ""148.107.12.20""
+}",,,,,,,,"{
+  ""labels"": [
+    ""s3://cs-prod-cannon-0ad38c137b9582dc/data/2be5d586-9ef7-4e78-a22f-7b570ef19dd1/part-00002.gz""
+  ],
+  ""log_provider"": ""ProcessRollup2"",
+  ""process_time"": 1.762474817769000e+09,
+  ""product"": {
+    ""name"": ""FDR"",
+    ""version"": ""1007.3.0020008.15""
+  },
+  ""profiles"": [
+    ""OSINT""
+  ],
+  ""uid"": ""947bf2eb-d39f-4cd7-bdfd-a0ff18202dac"",
+  ""version"": ""1.2.0""
+}",,,"{
+  ""cmd_line"": ""\""C:\\Program Files\\1E\\Client\\Tachyon.Performance.Metrics.exe\"""",
+  ""created_time"": ""1762474015.653"",
+  ""file"": {
+    ""hashes"": [
+      {
+        ""algorithm"": ""MD5"",
+        ""algorithm_id"": 1,
+        ""value"": ""c03e188cf07c06698a21b86f03d57a7c""
+      },
+      {
+        ""algorithm"": ""SHA-256"",
+        ""algorithm_id"": 3,
+        ""value"": ""604aaca18931d23e3e3c3e82ddbd56a1f2f8c7dd608a0fc0fece3a24a0c15034""
+      },
+      null
+    ],
+    ""name"": ""Tachyon.Performance.Metrics.exe"",
+    ""path"": ""\\Device\\HarddiskVolume3\\Program Files\\1E\\Client\\Tachyon.Performance.Metrics.exe""
+  },
+  ""name"": ""Tachyon"",
+  ""parent_process"": {
+    ""name"": ""Tachyon.Performance.Metrics.exe"",
+    ""pid"": 24928931980925,
+    ""xattributes"": {
+      ""ParentAuthenticationId"": 999
+    }
+  },
+  ""pid"": 24928959718929,
+  ""session"": null,
+  ""xattributes"": {
+    ""AuthenticationId"": 999,
+    ""ProcessCreateFlags"": 134218752,
+    ""ProcessParameterFlags"": 24577,
+    ""ProcessSxsFlags"": 64,
+    ""RawProcessId"": 23840
+  }
+}",,,,,,,,,100701,Process Activity: Launch,"{
+  ""Attacks"": [
+    {
+      ""Tactic"": ""Defense Evasion"",
+      ""Technique"": ""Subvert Trust Controls""
+    }
+  ],
+  ""AuthenticodeHashData"": ""52ef847a0cd9400b770e1cf3be1a31b837d009328f441e1f72dea6cb1992e1b7"",
+  ""ConfigStateHash"": ""5645076"",
+  ""EffectiveTransmissionClass"": ""3"",
+  ""Entitlements"": ""15"",
+  ""EventOrigin"": ""1"",
+  ""ImageSubsystem"": ""3"",
+  ""IntegrityLevel"": ""16384"",
+  ""SessionId"": ""0"",
+  ""SignInfoFlags"": ""524289"",
+  ""Tags"": ""27, 29, 40, 874, 924, 12094627905582, 12094627906234, 212205744161605"",
+  ""TokenType"": ""1"",
+  ""cribl_host"": ""x635543"",
+  ""name"": ""ProcessRollup2V19""
+}",sirtdatalake/system_activity/process_activity/2025/11/07/00/ProcessRollup2/CriblOut-ff4FPQ.6.parquet,2025-11-07 00:20:41.000 -0800,2025-11-07 00:21:48.813 Z,,2025-11-07 00:06:56.166 Z,,ProcessRollup2,1762474016,ProcessRollup2,"""C:\Program Files\1E\Client\Tachyon.Performance.Metrics.exe""",\Device\HarddiskVolume3\Program Files\1E\Client\Tachyon.Performance.Metrics.exe,Win,Tachyon.Performance.Metrics.exe,D0239506,SECURITY_LOCAL_SYSTEM_RID,,"[{""algorithm"":""MD5"",""algorithm_id"":1,""value"":""c03e188cf07c06698a21b86f03d57a7c""},{""algorithm"":""SHA-256"",""algorithm_id"":3,""value"":""604aaca18931d23e3e3c3e82ddbd56a1f2f8c7dd608a0fc0fece3a24a0c15034""},null]",,Tachyon.Performance.Metrics.exe,2025-11-07 00:06:56.166,c03e188cf07c06698a21b86f03d57a7c,604aaca18931d23e3e3c3e82ddbd56a1f2f8c7dd608a0fc0fece3a24a0c15034,,,,,,,,,,,,,,2025-11-07 00:06:56.166,Launch
+Launch,1,"{
+  ""process"": {
+    ""pid"": 3451029403676,
+    ""tid"": 66696686711060
+  },
+  ""user"": {
+    ""name"": ""SECURITY_LOCAL_SYSTEM_RID"",
+    ""uid"": ""S-1-5-18""
+  }
+}",,System Activity,1,Process Activity,1007,"{
+  ""agent_list"": [
+    {
+      ""name"": ""Falcon"",
+      ""type"": ""Endpoint Detection and Response"",
+      ""type_id"": 1,
+      ""uid"": ""1ae78c4fd09d450ca6a2d444edfcc13b"",
+      ""vendor_name"": ""Crowdstrike""
+    }
+  ],
+  ""domain"": ""cguser.capgroup.com"",
+  ""first_seen_time"": ""1752149812.0"",
+  ""interface_uid"": ""c5d53d1af5664433ba968b7afbdf08cc"",
+  ""ip"": ""136.226.48.125"",
+  ""name"": ""VDIE1SSC202N"",
+  ""network_interfaces"": [
+    {
+      ""ip"": ""10.213.33.43""
+    }
+  ],
+  ""os"": {
+    ""name"": ""Win""
+  },
+  ""public_ip"": ""148.107.11.20""
+}",,,,,,,,"{
+  ""labels"": [
+    ""s3://cs-prod-cannon-0ad38c137b9582dc/data/2be5d586-9ef7-4e78-a22f-7b570ef19dd1/part-00002.gz""
+  ],
+  ""log_provider"": ""ProcessRollup2"",
+  ""process_time"": 1.762474817770000e+09,
+  ""product"": {
+    ""name"": ""FDR"",
+    ""version"": ""1007.3.0020008.15""
+  },
+  ""profiles"": [
+    ""OSINT""
+  ],
+  ""uid"": ""2aa19201-7c0a-4ac6-8718-19b6cf2d55da"",
+  ""version"": ""1.2.0""
+}",,,"{
+  ""cmd_line"": ""\""C:\\Program Files\\1E\\Client\\Tachyon.Performance.Metrics.exe\"""",
+  ""created_time"": ""1762474018.675"",
+  ""file"": {
+    ""hashes"": [
+      {
+        ""algorithm"": ""MD5"",
+        ""algorithm_id"": 1,
+        ""value"": ""c03e188cf07c06698a21b86f03d57a7c""
+      },
+      {
+        ""algorithm"": ""SHA-256"",
+        ""algorithm_id"": 3,
+        ""value"": ""604aaca18931d23e3e3c3e82ddbd56a1f2f8c7dd608a0fc0fece3a24a0c15034""
+      },
+      null
+    ],
+    ""name"": ""Tachyon.Performance.Metrics.exe"",
+    ""path"": ""\\Device\\HarddiskVolume4\\Program Files\\1E\\Client\\Tachyon.Performance.Metrics.exe""
+  },
+  ""name"": ""Tachyon"",
+  ""parent_process"": {
+    ""name"": ""Tachyon.Performance.Metrics.exe"",
+    ""pid"": 3451029403676,
+    ""xattributes"": {
+      ""ParentAuthenticationId"": 999
+    }
+  },
+  ""pid"": 3451092804506,
+  ""session"": null,
+  ""xattributes"": {
+    ""AuthenticationId"": 999,
+    ""ProcessCreateFlags"": 134218752,
+    ""ProcessParameterFlags"": 24577,
+    ""ProcessSxsFlags"": 64,
+    ""RawProcessId"": 21328
+  }
+}",,,,,,,,,100701,Process Activity: Launch,"{
+  ""Attacks"": [
+    {
+      ""Tactic"": ""Defense Evasion"",
+      ""Technique"": ""Subvert Trust Controls""
+    }
+  ],
+  ""AuthenticodeHashData"": ""52ef847a0cd9400b770e1cf3be1a31b837d009328f441e1f72dea6cb1992e1b7"",
+  ""ConfigStateHash"": ""5645076"",
+  ""EffectiveTransmissionClass"": ""3"",
+  ""Entitlements"": ""15"",
+  ""EventOrigin"": ""1"",
+  ""ImageSubsystem"": ""3"",
+  ""IntegrityLevel"": ""16384"",
+  ""SessionId"": ""0"",
+  ""SignInfoFlags"": ""524289"",
+  ""Tags"": ""27, 29, 40, 874, 924, 12094627905582, 12094627906234, 212205744161605"",
+  ""TokenType"": ""1"",
+  ""cribl_host"": ""x635543"",
+  ""name"": ""ProcessRollup2V19""
+}",sirtdatalake/system_activity/process_activity/2025/11/07/00/ProcessRollup2/CriblOut-ff4FPQ.6.parquet,2025-11-07 00:20:41.000 -0800,2025-11-07 00:21:48.813 Z,,2025-11-07 00:06:59.242 Z,,ProcessRollup2,1762474019,ProcessRollup2,"""C:\Program Files\1E\Client\Tachyon.Performance.Metrics.exe""",\Device\HarddiskVolume4\Program Files\1E\Client\Tachyon.Performance.Metrics.exe,Win,Tachyon.Performance.Metrics.exe,VDIE1SSC202N,SECURITY_LOCAL_SYSTEM_RID,,"[{""algorithm"":""MD5"",""algorithm_id"":1,""value"":""c03e188cf07c06698a21b86f03d57a7c""},{""algorithm"":""SHA-256"",""algorithm_id"":3,""value"":""604aaca18931d23e3e3c3e82ddbd56a1f2f8c7dd608a0fc0fece3a24a0c15034""},null]",,Tachyon.Performance.Metrics.exe,2025-11-07 00:06:59.242,c03e188cf07c06698a21b86f03d57a7c,604aaca18931d23e3e3c3e82ddbd56a1f2f8c7dd608a0fc0fece3a24a0c15034,,,,,,,,,,,,,,2025-11-07 00:06:59.242,Launch
+Launch,1,"{
+  ""process"": {
+    ""pid"": 20667669333094,
+    ""tid"": 461873143819785
+  },
+  ""user"": {
+    ""name"": ""SECURITY_LOCAL_SYSTEM_RID"",
+    ""uid"": ""S-1-5-18""
+  }
+}",,System Activity,1,Process Activity,1007,"{
+  ""agent_list"": [
+    {
+      ""name"": ""Falcon"",
+      ""type"": ""Endpoint Detection and Response"",
+      ""type_id"": 1,
+      ""uid"": ""e43d9f4a413d457890ae77fc52c899ab"",
+      ""vendor_name"": ""Crowdstrike""
+    }
+  ],
+  ""domain"": ""cguser.capgroup.com"",
+  ""first_seen_time"": ""1713333316.0"",
+  ""interface_uid"": ""c5d53d1af5664433ba968b7afbdf08cc"",
+  ""ip"": ""148.107.11.20"",
+  ""name"": ""D0254871"",
+  ""network_interfaces"": [
+    {
+      ""ip"": ""10.17.57.117""
+    }
+  ],
+  ""os"": {
+    ""name"": ""Win""
+  },
+  ""public_ip"": ""148.107.11.20""
+}",,,,,,,,"{
+  ""labels"": [
+    ""s3://cs-prod-cannon-0ad38c137b9582dc/data/2be5d586-9ef7-4e78-a22f-7b570ef19dd1/part-00002.gz""
+  ],
+  ""log_provider"": ""ProcessRollup2"",
+  ""process_time"": 1.762474817770000e+09,
+  ""product"": {
+    ""name"": ""FDR"",
+    ""version"": ""1007.3.0020008.15""
+  },
+  ""profiles"": [
+    ""OSINT""
+  ],
+  ""uid"": ""f2373135-909b-49fd-aabd-eb520af5a33c"",
+  ""version"": ""1.2.0""
+}",,,"{
+  ""cmd_line"": ""\""C:\\Program Files\\1E\\Client\\Tachyon.Performance.Metrics.exe\"""",
+  ""created_time"": ""1762474022.608"",
+  ""file"": {
+    ""hashes"": [
+      {
+        ""algorithm"": ""MD5"",
+        ""algorithm_id"": 1,
+        ""value"": ""c03e188cf07c06698a21b86f03d57a7c""
+      },
+      {
+        ""algorithm"": ""SHA-256"",
+        ""algorithm_id"": 3,
+        ""value"": ""604aaca18931d23e3e3c3e82ddbd56a1f2f8c7dd608a0fc0fece3a24a0c15034""
+      },
+      null
+    ],
+    ""name"": ""Tachyon.Performance.Metrics.exe"",
+    ""path"": ""\\Device\\HarddiskVolume3\\Program Files\\1E\\Client\\Tachyon.Performance.Metrics.exe""
+  },
+  ""name"": ""Tachyon"",
+  ""parent_process"": {
+    ""name"": ""Tachyon.Performance.Metrics.exe"",
+    ""pid"": 20667669333094,
+    ""xattributes"": {
+      ""ParentAuthenticationId"": 999
+    }
+  },
+  ""pid"": 20667706662814,
+  ""session"": null,
+  ""xattributes"": {
+    ""AuthenticationId"": 999,
+    ""ProcessCreateFlags"": 134218752,
+    ""ProcessParameterFlags"": 24577,
+    ""ProcessSxsFlags"": 64,
+    ""RawProcessId"": 13852
+  }
+}",,,,,,,,,100701,Process Activity: Launch,"{
+  ""Attacks"": [
+    {
+      ""Tactic"": ""Defense Evasion"",
+      ""Technique"": ""Subvert Trust Controls""
+    }
+  ],
+  ""AuthenticodeHashData"": ""52ef847a0cd9400b770e1cf3be1a31b837d009328f441e1f72dea6cb1992e1b7"",
+  ""ConfigStateHash"": ""5645076"",
+  ""EffectiveTransmissionClass"": ""3"",
+  ""Entitlements"": ""15"",
+  ""EventOrigin"": ""1"",
+  ""ImageSubsystem"": ""3"",
+  ""IntegrityLevel"": ""16384"",
+  ""SessionId"": ""0"",
+  ""SignInfoFlags"": ""524289"",
+  ""Tags"": ""27, 29, 40, 874, 924, 12094627905582, 12094627906234, 212205744161605"",
+  ""TokenType"": ""1"",
+  ""cribl_host"": ""x635543"",
+  ""name"": ""ProcessRollup2V19""
+}",sirtdatalake/system_activity/process_activity/2025/11/07/00/ProcessRollup2/CriblOut-ff4FPQ.6.parquet,2025-11-07 00:20:41.000 -0800,2025-11-07 00:21:48.813 Z,,2025-11-07 00:07:03.089 Z,,ProcessRollup2,1762474023,ProcessRollup2,"""C:\Program Files\1E\Client\Tachyon.Performance.Metrics.exe""",\Device\HarddiskVolume3\Program Files\1E\Client\Tachyon.Performance.Metrics.exe,Win,Tachyon.Performance.Metrics.exe,D0254871,SECURITY_LOCAL_SYSTEM_RID,,"[{""algorithm"":""MD5"",""algorithm_id"":1,""value"":""c03e188cf07c06698a21b86f03d57a7c""},{""algorithm"":""SHA-256"",""algorithm_id"":3,""value"":""604aaca18931d23e3e3c3e82ddbd56a1f2f8c7dd608a0fc0fece3a24a0c15034""},null]",,Tachyon.Performance.Metrics.exe,2025-11-07 00:07:03.089,c03e188cf07c06698a21b86f03d57a7c,604aaca18931d23e3e3c3e82ddbd56a1f2f8c7dd608a0fc0fece3a24a0c15034,,,,,,,,,,,,,,2025-11-07 00:07:03.089,Launch
+Launch,1,"{
+  ""process"": {
+    ""pid"": 855616304474427,
+    ""tid"": 0
+  },
+  ""user"": null
+}",,System Activity,1,Process Activity,1007,"{
+  ""agent_list"": [
+    {
+      ""name"": ""Falcon"",
+      ""type"": ""Endpoint Detection and Response"",
+      ""type_id"": 1,
+      ""uid"": ""68ce6b26c67f44a39ea579c8166553ac"",
+      ""vendor_name"": ""Crowdstrike""
+    }
+  ],
+  ""domain"": ""none"",
+  ""first_seen_time"": ""1647749899.0"",
+  ""interface_uid"": ""c5d53d1af5664433ba968b7afbdf08cc"",
+  ""ip"": ""148.107.12.20"",
+  ""name"": ""x410623"",
+  ""network_interfaces"": [
+    {
+      ""ip"": ""10.225.243.24""
+    }
+  ],
+  ""os"": {
+    ""name"": ""Lin""
+  },
+  ""public_ip"": ""148.107.12.20""
+}",,,,,,,,"{
+  ""labels"": [
+    ""s3://cs-prod-cannon-0ad38c137b9582dc/data/2be5d586-9ef7-4e78-a22f-7b570ef19dd1/part-00002.gz""
+  ],
+  ""log_provider"": ""ProcessRollup2"",
+  ""process_time"": 1.762474817773000e+09,
+  ""product"": {
+    ""name"": ""FDR"",
+    ""version"": ""1007.8.0018108.15""
+  },
+  ""profiles"": [
+    ""OSINT""
+  ],
+  ""uid"": ""c96c0f37-e5fe-4c59-a0d6-405edc9ff1a9"",
+  ""version"": ""1.2.0""
+}",,,"{
+  ""cmd_line"": ""cat"",
+  ""created_time"": ""1762474044.387"",
+  ""file"": {
+    ""hashes"": [
+      {
+        ""algorithm"": ""MD5"",
+        ""algorithm_id"": 1,
+        ""value"": ""61820c1bd2782b4676a548f225dec39c""
+      },
+      {
+        ""algorithm"": ""SHA-256"",
+        ""algorithm_id"": 3,
+        ""value"": ""ffc78fed274d5548242762fbf21666bfbecef6a9436241cd4e31466094b24acf""
+      },
+      null
+    ],
+    ""name"": ""cat"",
+    ""path"": ""/usr/bin/cat""
+  },
+  ""name"": ""cat"",
+  ""parent_process"": {
+    ""pid"": 855616304474427,
+    ""xattributes"": null
+  },
+  ""pid"": 855616310934723,
+  ""session"": {
+    ""uid"": ""835182186489498""
+  },
+  ""terminated_time"": ""1762474044.389"",
+  ""xattributes"": {
+    ""RawProcessId"": 26255
+  }
+}",,,,,,,,,100701,Process Activity: Launch,"{
+  ""Attacks"": [
+    {
+      ""Tactic"": ""Credential Access, Collection"",
+      ""Technique"": ""OS Credential Dumping, File and Directory Discovery""
+    }
+  ],
+  ""CapPrm"": ""137438953471"",
+  ""ChangeTime"": ""1612554297.516"",
+  ""ConfigStateHash"": ""2153877886"",
+  ""EffectiveTransmissionClass"": ""2"",
+  ""Entitlements"": ""15"",
+  ""EventOrigin"": ""17"",
+  ""GID"": ""0"",
+  ""RGID"": ""0"",
+  ""RUID"": ""0"",
+  ""RootPath"": ""/"",
+  ""SVGID"": ""0"",
+  ""SVUID"": ""0"",
+  ""SourceThreadId"": ""0"",
+  ""Tags"": ""874, 12094627905582, 12094627906234, 212205744162400"",
+  ""UID"": ""0"",
+  ""UserName"": ""root"",
+  ""cribl_host"": ""x635543"",
+  ""name"": ""ProcessRollup2LinV11""
+}",sirtdatalake/system_activity/process_activity/2025/11/07/00/ProcessRollup2/CriblOut-ff4FPQ.6.parquet,2025-11-07 00:20:41.000 -0800,2025-11-07 00:21:48.813 Z,,2025-11-07 00:07:24.416 Z,,ProcessRollup2,1762474044,ProcessRollup2,cat,/usr/bin/cat,Lin,cat,x410623,,,"[{""algorithm"":""MD5"",""algorithm_id"":1,""value"":""61820c1bd2782b4676a548f225dec39c""},{""algorithm"":""SHA-256"",""algorithm_id"":3,""value"":""ffc78fed274d5548242762fbf21666bfbecef6a9436241cd4e31466094b24acf""},null]",,,2025-11-07 00:07:24.416,61820c1bd2782b4676a548f225dec39c,ffc78fed274d5548242762fbf21666bfbecef6a9436241cd4e31466094b24acf,,,,,,,,,,,,,,2025-11-07 00:07:24.416,Launch
+Launch,1,"{
+  ""process"": {
+    ""pid"": 1762474012053177900,
+    ""tid"": 0
+  },
+  ""user"": null
+}",,System Activity,1,Process Activity,1007,"{
+  ""agent_list"": [
+    {
+      ""name"": ""Falcon"",
+      ""type"": ""Endpoint Detection and Response"",
+      ""type_id"": 1,
+      ""uid"": ""641831bb988c453ba87e8e253648485e"",
+      ""vendor_name"": ""Crowdstrike""
+    }
+  ],
+  ""domain"": ""none"",
+  ""first_seen_time"": ""1710329047.0"",
+  ""interface_uid"": ""c5d53d1af5664433ba968b7afbdf08cc"",
+  ""ip"": ""148.107.12.123"",
+  ""name"": ""x507133"",
+  ""network_interfaces"": [
+    {
+      ""ip"": ""10.226.12.51""
+    }
+  ],
+  ""os"": {
+    ""name"": ""Lin""
+  },
+  ""public_ip"": ""148.107.12.123""
+}",,,,,,,,"{
+  ""labels"": [
+    ""s3://cs-prod-cannon-0ad38c137b9582dc/data/2be5d586-9ef7-4e78-a22f-7b570ef19dd1/part-00002.gz""
+  ],
+  ""log_provider"": ""ProcessRollup2"",
+  ""process_time"": 1.762474817773000e+09,
+  ""product"": {
+    ""name"": ""FDR"",
+    ""version"": ""1007.8.0018108.15""
+  },
+  ""profiles"": [
+    ""OSINT""
+  ],
+  ""uid"": ""9fbf7117-3264-46a2-a2f6-126622ccb8d3"",
+  ""version"": ""1.2.0""
+}",,,"{
+  ""cmd_line"": ""/usr/bin/perl /usr/share/centrifydc/mappers/machine/linux_smartcard_certgp.pl map refresh"",
+  ""created_time"": ""1762474012.059"",
+  ""file"": {
+    ""hashes"": [
+      {
+        ""algorithm"": ""MD5"",
+        ""algorithm_id"": 1,
+        ""value"": ""e80fda56564d8d337e56835f373aee56""
+      },
+      {
+        ""algorithm"": ""SHA-256"",
+        ""algorithm_id"": 3,
+        ""value"": ""df1eddd869ac77405a76f821d06952ce8608301d38594c17ce91492cf7ff4a3b""
+      },
+      null
+    ],
+    ""name"": ""perl"",
+    ""path"": ""/usr/bin/perl""
+  },
+  ""name"": ""perl"",
+  ""parent_process"": {
+    ""name"": ""bash"",
+    ""pid"": 1762474012053177900,
+    ""xattributes"": null
+  },
+  ""pid"": 1762474012059664400,
+  ""session"": {
+    ""uid"": ""1759973199308765092""
+  },
+  ""xattributes"": {
+    ""RawProcessId"": 1488521
+  }
+}",,,,,,,,,100701,Process Activity: Launch,"{
+  ""Attacks"": [
+    {
+      ""Tactic"": ""Defense Evasion"",
+      ""Technique"": ""Obfuscated Files or Information""
+    }
+  ],
+  ""CapPrm"": ""2199023255551"",
+  ""ChangeTime"": ""1754517319.507"",
+  ""ConfigStateHash"": ""3754203123"",
+  ""EffectiveTransmissionClass"": ""2"",
+  ""Entitlements"": ""15"",
+  ""EventOrigin"": ""17"",
+  ""GID"": ""0"",
+  ""RGID"": ""0"",
+  ""RUID"": ""0"",
+  ""RootPath"": ""/"",
+  ""SVGID"": ""0"",
+  ""SVUID"": ""0"",
+  ""SourceThreadId"": ""0"",
+  ""Tags"": ""874, 12094627905582, 12094627906234"",
+  ""UID"": ""0"",
+  ""UserName"": ""root"",
+  ""cribl_host"": ""x635543"",
+  ""name"": ""ProcessRollup2LinV11""
+}",sirtdatalake/system_activity/process_activity/2025/11/07/00/ProcessRollup2/CriblOut-ff4FPQ.6.parquet,2025-11-07 00:20:41.000 -0800,2025-11-07 00:21:48.813 Z,,2025-11-07 00:06:57.445 Z,,ProcessRollup2,1762474017,ProcessRollup2,/usr/bin/perl /usr/share/centrifydc/mappers/machine/linux_smartcard_certgp.pl map refresh,/usr/bin/perl,Lin,perl,x507133,,,"[{""algorithm"":""MD5"",""algorithm_id"":1,""value"":""e80fda56564d8d337e56835f373aee56""},{""algorithm"":""SHA-256"",""algorithm_id"":3,""value"":""df1eddd869ac77405a76f821d06952ce8608301d38594c17ce91492cf7ff4a3b""},null]",,bash,2025-11-07 00:06:57.445,e80fda56564d8d337e56835f373aee56,df1eddd869ac77405a76f821d06952ce8608301d38594c17ce91492cf7ff4a3b,,,,,,,,,,,,,,2025-11-07 00:06:57.445,Launch
+Launch,1,"{
+  ""process"": {
+    ""pid"": 63430971955,
+    ""tid"": 1336141909362
+  },
+  ""user"": {
+    ""name"": ""SECURITY_LOCAL_SYSTEM_RID"",
+    ""uid"": ""S-1-5-18""
+  }
+}",,System Activity,1,Process Activity,1007,"{
+  ""agent_list"": [
+    {
+      ""name"": ""Falcon"",
+      ""type"": ""Endpoint Detection and Response"",
+      ""type_id"": 1,
+      ""uid"": ""948ddb208c0846d990d2c97df2f12819"",
+      ""vendor_name"": ""Crowdstrike""
+    }
+  ],
+  ""domain"": ""cguser.capgroup.com"",
+  ""first_seen_time"": ""1762319981.0"",
+  ""interface_uid"": ""c5d53d1af5664433ba968b7afbdf08cc"",
+  ""ip"": ""148.107.12.20"",
+  ""name"": ""VDIW1INYS2022"",
+  ""network_interfaces"": [
+    {
+      ""ip"": ""10.246.84.148""
+    }
+  ],
+  ""os"": {
+    ""name"": ""Win""
+  },
+  ""public_ip"": ""148.107.12.20""
+}",,,,,,,,"{
+  ""labels"": [
+    ""s3://cs-prod-cannon-0ad38c137b9582dc/data/2be5d586-9ef7-4e78-a22f-7b570ef19dd1/part-00002.gz""
+  ],
+  ""log_provider"": ""ProcessRollup2"",
+  ""process_time"": 1.762474817774000e+09,
+  ""product"": {
+    ""name"": ""FDR"",
+    ""version"": ""1007.3.0020008.15""
+  },
+  ""profiles"": [
+    ""OSINT""
+  ],
+  ""uid"": ""5055d606-c39f-494d-bd0b-a23972931b82"",
+  ""version"": ""1.2.0""
+}",,,"{
+  ""cmd_line"": ""\\??\\C:\\WINDOWS\\system32\\conhost.exe 0xffffffff -ForceV1"",
+  ""created_time"": ""1762473985.332"",
+  ""file"": {
+    ""hashes"": [
+      {
+        ""algorithm"": ""MD5"",
+        ""algorithm_id"": 1,
+        ""value"": ""f8c013dd80605f088c2e3202e6c5969e""
+      },
+      {
+        ""algorithm"": ""SHA-256"",
+        ""algorithm_id"": 3,
+        ""value"": ""29e4840bf10bafb9fd5bcad70612a19b78a4a89b8f30220edc654bd49832d916""
+      },
+      null
+    ],
+    ""name"": ""conhost.exe"",
+    ""path"": ""\\Device\\HarddiskVolume4\\Windows\\System32\\conhost.exe""
+  },
+  ""name"": ""Console Windows Host"",
+  ""parent_process"": {
+    ""name"": ""Tachyon.Performance.Metrics.exe"",
+    ""pid"": 63430971955,
+    ""xattributes"": {
+      ""ParentAuthenticationId"": 999
+    }
+  },
+  ""pid"": 63432324693,
+  ""session"": null,
+  ""xattributes"": {
+    ""AuthenticationId"": 999,
+    ""RawProcessId"": 7588
+  }
+}",,,,,,,,,100701,Process Activity: Launch,"{
+  ""Attacks"": [
+    {
+      ""Tactic"": ""Execution"",
+      ""Technique"": ""User Execution""
+    }
+  ],
+  ""AuthenticodeHashData"": ""fbdb96c463ff2cc4843a3c1cd9f1d8a7751ffd30"",
+  ""ConfigStateHash"": ""1712569209"",
+  ""EffectiveTransmissionClass"": ""3"",
+  ""Entitlements"": ""15"",
+  ""EventOrigin"": ""1"",
+  ""ImageSubsystem"": ""2"",
+  ""IntegrityLevel"": ""16384"",
+  ""SessionId"": ""0"",
+  ""SignInfoFlags"": ""8683538"",
+  ""Tags"": ""27, 29, 41, 874, 924, 12094627905582, 12094627906234"",
+  ""TokenType"": ""1"",
+  ""cribl_host"": ""x635543"",
+  ""name"": ""ProcessRollup2V19""
+}",sirtdatalake/system_activity/process_activity/2025/11/07/00/ProcessRollup2/CriblOut-ff4FPQ.6.parquet,2025-11-07 00:20:41.000 -0800,2025-11-07 00:21:48.813 Z,,2025-11-07 00:06:25.730 Z,,ProcessRollup2,1762473985,ProcessRollup2,\??\C:\WINDOWS\system32\conhost.exe 0xffffffff -ForceV1,\Device\HarddiskVolume4\Windows\System32\conhost.exe,Win,conhost.exe,VDIW1INYS2022,SECURITY_LOCAL_SYSTEM_RID,,"[{""algorithm"":""MD5"",""algorithm_id"":1,""value"":""f8c013dd80605f088c2e3202e6c5969e""},{""algorithm"":""SHA-256"",""algorithm_id"":3,""value"":""29e4840bf10bafb9fd5bcad70612a19b78a4a89b8f30220edc654bd49832d916""},null]",,Tachyon.Performance.Metrics.exe,2025-11-07 00:06:25.730,f8c013dd80605f088c2e3202e6c5969e,29e4840bf10bafb9fd5bcad70612a19b78a4a89b8f30220edc654bd49832d916,,,,,,,,,,,,,,2025-11-07 00:06:25.730,Launch
+Launch,1,"{
+  ""process"": {
+    ""pid"": 1762474040977433900,
+    ""tid"": 0
+  },
+  ""user"": null
+}",,System Activity,1,Process Activity,1007,"{
+  ""agent_list"": [
+    {
+      ""name"": ""Falcon"",
+      ""type"": ""Endpoint Detection and Response"",
+      ""type_id"": 1,
+      ""uid"": ""f38647b45dc54bcea894a428284dc184"",
+      ""vendor_name"": ""Crowdstrike""
+    }
+  ],
+  ""domain"": ""none"",
+  ""first_seen_time"": ""1732730793.0"",
+  ""interface_uid"": ""c5d53d1af5664433ba968b7afbdf08cc"",
+  ""ip"": ""148.107.12.123"",
+  ""name"": ""x678084"",
+  ""network_interfaces"": [
+    {
+      ""ip"": ""10.226.20.4""
+    }
+  ],
+  ""os"": {
+    ""name"": ""Lin""
+  },
+  ""public_ip"": ""148.107.12.123""
+}",,,,,,,,"{
+  ""labels"": [
+    ""s3://cs-prod-cannon-0ad38c137b9582dc/data/2be5d586-9ef7-4e78-a22f-7b570ef19dd1/part-00002.gz""
+  ],
+  ""log_provider"": ""ProcessRollup2"",
+  ""process_time"": 1.762474817774000e+09,
+  ""product"": {
+    ""name"": ""FDR"",
+    ""version"": ""1007.8.0018108.15""
+  },
+  ""profiles"": [
+    ""OSINT""
+  ],
+  ""uid"": ""eba4c0bc-d06f-491a-b308-f25f7e9c875d"",
+  ""version"": ""1.2.0""
+}",,,"{
+  ""cmd_line"": ""/bin/sh -c /opt/Tanium/TaniumClient/VB/TempUnix_140613951072000_331345638_.sh | iconv -f `locale charmap` -t UTF-8"",
+  ""created_time"": ""1762474040.979"",
+  ""file"": {
+    ""hashes"": [
+      {
+        ""algorithm"": ""MD5"",
+        ""algorithm_id"": 1,
+        ""value"": ""07652a385fb104d82b7cf4b25e501ac7""
+      },
+      {
+        ""algorithm"": ""SHA-256"",
+        ""algorithm_id"": 3,
+        ""value"": ""4b31e985b1b8e631958efa80751beb7e2ff8567204d92e5e974fa35885fd56fc""
+      },
+      null
+    ],
+    ""name"": ""bash"",
+    ""path"": ""/usr/bin/bash""
+  },
+  ""name"": ""bash"",
+  ""parent_process"": {
+    ""pid"": 1762474040977433900,
+    ""xattributes"": null
+  },
+  ""pid"": 1762474040979138600,
+  ""session"": {
+    ""uid"": ""1759973887145267227""
+  },
+  ""terminated_time"": ""1762474040.980"",
+  ""xattributes"": {
+    ""RawProcessId"": 1599836
+  }
+}",,,,,,,,,100701,Process Activity: Launch,"{
+  ""Attacks"": [
+    {
+      ""Tactic"": ""Execution"",
+      ""Technique"": ""Command and Scripting Interpreter""
+    }
+  ],
+  ""CapPrm"": ""2199023255551"",
+  ""ChangeTime"": ""1756935314.300"",
+  ""ConfigStateHash"": ""3754203123"",
+  ""EffectiveTransmissionClass"": ""2"",
+  ""Entitlements"": ""15"",
+  ""EventOrigin"": ""17"",
+  ""GID"": ""0"",
+  ""RGID"": ""0"",
+  ""RUID"": ""0"",
+  ""RootPath"": ""/"",
+  ""SVGID"": ""0"",
+  ""SVUID"": ""0"",
+  ""SourceThreadId"": ""0"",
+  ""Tags"": ""874, 12094627905582, 12094627906234"",
+  ""UID"": ""0"",
+  ""UserName"": ""root"",
+  ""cribl_host"": ""x635543"",
+  ""name"": ""ProcessRollup2LinV11""
+}",sirtdatalake/system_activity/process_activity/2025/11/07/00/ProcessRollup2/CriblOut-ff4FPQ.6.parquet,2025-11-07 00:20:41.000 -0800,2025-11-07 00:21:48.813 Z,,2025-11-07 00:07:21.120 Z,,ProcessRollup2,1762474041,ProcessRollup2,/bin/sh -c /opt/Tanium/TaniumClient/VB/TempUnix_140613951072000_331345638_.sh | iconv -f `locale charmap` -t UTF-8,/usr/bin/bash,Lin,bash,x678084,,,"[{""algorithm"":""MD5"",""algorithm_id"":1,""value"":""07652a385fb104d82b7cf4b25e501ac7""},{""algorithm"":""SHA-256"",""algorithm_id"":3,""value"":""4b31e985b1b8e631958efa80751beb7e2ff8567204d92e5e974fa35885fd56fc""},null]",,,2025-11-07 00:07:21.120,07652a385fb104d82b7cf4b25e501ac7,4b31e985b1b8e631958efa80751beb7e2ff8567204d92e5e974fa35885fd56fc,,,,,,,,,,,,,,2025-11-07 00:07:21.120,Launch
+Launch,1,"{
+  ""process"": {
+    ""pid"": 30660569575012,
+    ""tid"": 448376549243925
+  },
+  ""user"": {
+    ""name"": ""SECURITY_LOCAL_SYSTEM_RID"",
+    ""uid"": ""S-1-5-18""
+  }
+}",,System Activity,1,Process Activity,1007,"{
+  ""agent_list"": [
+    {
+      ""name"": ""Falcon"",
+      ""type"": ""Endpoint Detection and Response"",
+      ""type_id"": 1,
+      ""uid"": ""11c58e76882941ffb8726c051a94f973"",
+      ""vendor_name"": ""Crowdstrike""
+    }
+  ],
+  ""domain"": ""cguser.capgroup.com"",
+  ""first_seen_time"": ""1689098569.0"",
+  ""interface_uid"": ""c5d53d1af5664433ba968b7afbdf08cc"",
+  ""ip"": ""148.107.12.123"",
+  ""name"": ""W236204"",
+  ""network_interfaces"": [
+    {
+      ""ip"": ""10.226.14.74""
+    }
+  ],
+  ""os"": {
+    ""name"": ""Win""
+  },
+  ""public_ip"": ""148.107.12.123""
+}",,,,,,,,"{
+  ""labels"": [
+    ""s3://cs-prod-cannon-0ad38c137b9582dc/data/2be5d586-9ef7-4e78-a22f-7b570ef19dd1/part-00002.gz""
+  ],
+  ""log_provider"": ""ProcessRollup2"",
+  ""process_time"": 1.762474817774000e+09,
+  ""product"": {
+    ""name"": ""FDR"",
+    ""version"": ""1007.3.0019909.15""
+  },
+  ""profiles"": [
+    ""OSINT""
+  ],
+  ""uid"": ""cfaa4a61-1cce-423f-91b2-b959ee13dffd"",
+  ""version"": ""1.2.0""
+}",,,"{
+  ""cmd_line"": ""\""C:\\Program Files\\SplunkUniversalForwarder\\bin\\splunk-powershell.exe\"" --ps2"",
+  ""created_time"": ""1762473987.503"",
+  ""file"": {
+    ""hashes"": [
+      {
+        ""algorithm"": ""MD5"",
+        ""algorithm_id"": 1,
+        ""value"": ""9cadca6036e332f2785648f2922f5619""
+      },
+      {
+        ""algorithm"": ""SHA-256"",
+        ""algorithm_id"": 3,
+        ""value"": ""2fccf4c5d1bbc6f650a2a324af5885855d95ded772ae702ff561483cdb1f4a34""
+      },
+      null
+    ],
+    ""name"": ""splunk-powershell.exe"",
+    ""path"": ""\\Device\\HarddiskVolume2\\Program Files\\SplunkUniversalForwarder\\bin\\splunk-powershell.exe""
+  },
+  ""name"": ""splunk-powershell.exe"",
+  ""parent_process"": {
+    ""name"": ""splunkd.exe"",
+    ""pid"": 30660569575012,
+    ""xattributes"": {
+      ""ParentAuthenticationId"": 999
+    }
+  },
+  ""pid"": 30904484213858,
+  ""session"": null,
+  ""xattributes"": {
+    ""AuthenticationId"": 999,
+    ""ProcessCreateFlags"": 67634688,
+    ""ProcessParameterFlags"": 24577,
+    ""ProcessSxsFlags"": 64,
+    ""RawProcessId"": 6424
+  }
+}",,,,,,,,,100701,Process Activity: Launch,"{
+  ""AuthenticodeHashData"": ""a82dadef95e223033fa7420e7f816b42625f0f62fe266ef3d11dd9ae0fb35776"",
+  ""ConfigStateHash"": ""22449013"",
+  ""EffectiveTransmissionClass"": ""3"",
+  ""Entitlements"": ""15"",
+  ""EventOrigin"": ""1"",
+  ""ImageSubsystem"": ""3"",
+  ""IntegrityLevel"": ""16384"",
+  ""SessionId"": ""0"",
+  ""SignInfoFlags"": ""787456"",
+  ""Tags"": ""27, 40, 874, 1225, 10995116279184, 12094627905582, 12094627906234"",
+  ""TokenType"": ""1"",
+  ""WindowFlags"": ""384"",
+  ""cribl_host"": ""x635543"",
+  ""name"": ""ProcessRollup2V19""
+}",sirtdatalake/system_activity/process_activity/2025/11/07/00/ProcessRollup2/CriblOut-ff4FPQ.6.parquet,2025-11-07 00:20:41.000 -0800,2025-11-07 00:21:48.813 Z,,2025-11-07 00:06:27.844 Z,,ProcessRollup2,1762473987,ProcessRollup2,"""C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe"" --ps2",\Device\HarddiskVolume2\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe,Win,splunk-powershell.exe,W236204,SECURITY_LOCAL_SYSTEM_RID,,"[{""algorithm"":""MD5"",""algorithm_id"":1,""value"":""9cadca6036e332f2785648f2922f5619""},{""algorithm"":""SHA-256"",""algorithm_id"":3,""value"":""2fccf4c5d1bbc6f650a2a324af5885855d95ded772ae702ff561483cdb1f4a34""},null]",,splunkd.exe,2025-11-07 00:06:27.844,9cadca6036e332f2785648f2922f5619,2fccf4c5d1bbc6f650a2a324af5885855d95ded772ae702ff561483cdb1f4a34,,,,,,,,,,,,,,2025-11-07 00:06:27.844,Launch
+Launch,1,"{
+  ""process"": {
+    ""pid"": 1068145305695858,
+    ""tid"": 0
+  },
+  ""user"": null
+}",,System Activity,1,Process Activity,1007,"{
+  ""agent_list"": [
+    {
+      ""name"": ""Falcon"",
+      ""type"": ""Endpoint Detection and Response"",
+      ""type_id"": 1,
+      ""uid"": ""de0895feaeda40e88eef581df1d55ea5"",
+      ""vendor_name"": ""Crowdstrike""
+    }
+  ],
+  ""domain"": ""none"",
+  ""first_seen_time"": ""1647146056.0"",
+  ""interface_uid"": ""c5d53d1af5664433ba968b7afbdf08cc"",
+  ""ip"": ""148.107.11.20"",
+  ""name"": ""x817473"",
+  ""network_interfaces"": [
+    {
+      ""ip"": ""10.18.116.23""
+    }
+  ],
+  ""os"": {
+    ""name"": ""Lin""
+  },
+  ""public_ip"": ""148.107.11.20""
+}",,,,,,,,"{
+  ""labels"": [
+    ""s3://cs-prod-cannon-0ad38c137b9582dc/data/2be5d586-9ef7-4e78-a22f-7b570ef19dd1/part-00002.gz""
+  ],
+  ""log_provider"": ""ProcessRollup2"",
+  ""process_time"": 1.762474817775000e+09,
+  ""product"": {
+    ""name"": ""FDR"",
+    ""version"": ""1007.8.0018108.15""
+  },
+  ""profiles"": [
+    ""OSINT""
+  ],
+  ""uid"": ""3a20a672-dd16-4015-bf94-4770070eee5b"",
+  ""version"": ""1.2.0""
+}",,,"{
+  ""cmd_line"": ""f97a012c-8219-0a3b-7602-10fd8772d1d5 /usr/bin/awk awk -F. {n=($1*256*256*256 + $2*256*256 + $3*256 + $4);printf \""%.0f\"",n}"",
+  ""created_time"": ""1762473998.140"",
+  ""file"": {
+    ""hashes"": [
+      {
+        ""algorithm"": ""MD5"",
+        ""algorithm_id"": 1,
+        ""value"": ""7d51709cb03e5ebda65293415e1d8eaf""
+      },
+      {
+        ""algorithm"": ""SHA-256"",
+        ""algorithm_id"": 3,
+        ""value"": ""43ef0b8af223083bbe516de9173dd3ef25bd913b265f114b7d457238fbb68e42""
+      },
+      null
+    ],
+    ""name"": ""process"",
+    ""path"": ""/opt/datadog/apm/inject/process""
+  },
+  ""name"": ""process"",
+  ""parent_process"": {
+    ""pid"": 1068145305695858,
+    ""xattributes"": null
+  },
+  ""pid"": 1068145328309461,
+  ""session"": {
+    ""uid"": ""1036208165204908""
+  },
+  ""terminated_time"": ""1762473998.155"",
+  ""xattributes"": {
+    ""RawProcessId"": 10566
+  }
+}",,,,,,,,,100701,Process Activity: Launch,"{
+  ""CapPrm"": ""137438953471"",
+  ""ChangeTime"": ""1723628960.242"",
+  ""ConfigStateHash"": ""2153877886"",
+  ""EffectiveTransmissionClass"": ""2"",
+  ""Entitlements"": ""15"",
+  ""EventOrigin"": ""17"",
+  ""GID"": ""0"",
+  ""RGID"": ""0"",
+  ""RUID"": ""0"",
+  ""RootPath"": ""/"",
+  ""SVGID"": ""0"",
+  ""SVUID"": ""0"",
+  ""SourceThreadId"": ""0"",
+  ""Tags"": ""874, 212205744162400"",
+  ""UID"": ""0"",
+  ""UserName"": ""root"",
+  ""cribl_host"": ""x635543"",
+  ""name"": ""ProcessRollup2LinV11""
+}",sirtdatalake/system_activity/process_activity/2025/11/07/00/ProcessRollup2/CriblOut-ff4FPQ.6.parquet,2025-11-07 00:20:41.000 -0800,2025-11-07 00:21:48.813 Z,,2025-11-07 00:06:38.482 Z,,ProcessRollup2,1762473998,ProcessRollup2,"f97a012c-8219-0a3b-7602-10fd8772d1d5 /usr/bin/awk awk -F. {n=($1*256*256*256 + $2*256*256 + $3*256 + $4);printf ""%.0f"",n}",/opt/datadog/apm/inject/process,Lin,process,x817473,,,"[{""algorithm"":""MD5"",""algorithm_id"":1,""value"":""7d51709cb03e5ebda65293415e1d8eaf""},{""algorithm"":""SHA-256"",""algorithm_id"":3,""value"":""43ef0b8af223083bbe516de9173dd3ef25bd913b265f114b7d457238fbb68e42""},null]",,,2025-11-07 00:06:38.482,7d51709cb03e5ebda65293415e1d8eaf,43ef0b8af223083bbe516de9173dd3ef25bd913b265f114b7d457238fbb68e42,,,,,,,,,,,,,,2025-11-07 00:06:38.482,Launch

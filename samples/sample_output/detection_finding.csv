@@ -1,0 +1,1110 @@
+﻿ACTIVITY_NAME,ACTIVITY_ID,RESOURCES,CATEGORY_NAME,CATEGORY_UID,CLASS_NAME,CLASS_UID,COMMENT,CONFIDENCE,CONFIDENCE_ID,CONFIDENCE_CORE,DURATION,END_TIME,ENRICHMENTS,EVIDENCES,FINDING_INFO,IMPACT_SCORE,IMPACT,IMPACT_ID,MESSAGE,METADATA,OBSERVABLES,REMEDIATION,RISK_DETAILS,RISK_LEVEL,RISK_LEVEL_ID,RISK_SCORE,SEVERITY,SEVERITY_ID,START_TIME,STATUS_CODE,STATUS_DETAIL,STATUS_ID,TIMEZONE_OFFSET,TYPE_UID,TYPE_NAME,UNMAPPED,VULNERABILITIES,FILE_NAME,S3_FILE_TS,LOAD_TS,_COUNT,_TIME,_STATUS,API,CLOUD,ACTOR,DEVICE,ACTION,ACTION_ID,AUTHORIZATIONS,DISPOSITION,DISPOSITION_ID,FIREWALL_RULE,ATTACKS,MALWARE,DATA_CLASSIFICATION,CONTAINER,NAMESPACE_PID,EVENT_TIME
+Create,1,,,2,Detection Finding,2004,,,,,,,,"{
+  ""actor"": {
+    ""app_name"": ""datadog""
+  },
+  ""connection_info"": {
+    ""direction"": ""Outbound"",
+    ""direction_id"": 2,
+    ""session"": {
+      ""count"": 1,
+      ""uid"": ""578518629""
+    }
+  },
+  ""dst_endpoint"": {
+    ""domain"": ""capgroup.com"",
+    ""interface_name"": ""ethernet1/26.901"",
+    ""ip"": ""3.233.158.15"",
+    ""location"": {
+      ""country"": ""United States""
+    },
+    ""owner"": null,
+    ""port"": 443,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""cx-trust.901""
+  },
+  ""file"": {
+    ""hashes"": ""{}""
+  },
+  ""protocol_name"": ""tcp"",
+  ""src_endpoint"": {
+    ""interface_name"": ""ethernet1/25.2100"",
+    ""ip"": ""10.250.149.40"",
+    ""name"": ""sjx1-fwm-pn4"",
+    ""owner"": null,
+    ""port"": 35064,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""cx-aws.int.dev""
+  },
+  ""url"": {
+    ""url_string"": ""api.datadoghq.com/""
+  }
+}","{
+  ""analytic"": {
+    ""name"": ""cg_aws_vpcs_to_internet"",
+    ""type"": ""rule"",
+    ""type_id"": 1,
+    ""uid"": ""5d46d4c8-57a9-489f-8dea-c933def66f0e""
+  },
+  ""first_seen_time"": 1763359800,
+  ""title"": ""9999"",
+  ""type"": [
+    ""url"",
+    ""THREAT"",
+    null
+  ],
+  ""uid"": ""9999""
+}",,,,,"{
+  ""event_code"": 9999,
+  ""lables"": [
+    ""pan_logs:threat:source::""
+  ],
+  ""log_provider"": ""pan:threat"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host""
+  ],
+  ""uid"": ""7560173865768923913"",
+  ""version"": ""1.2.0""
+}",,,,,,,Informational,1,,,,,,200401,,"{
+  ""category"": ""computer-and-internet-info"",
+  ""contentversion"": ""AppThreat-0-0"",
+  ""devicegrouphierarchylevel1"": ""461"",
+  ""devicegrouphierarchylevel2"": ""370"",
+  ""devicegrouphierarchylevel3"": ""467"",
+  ""devicegrouphierarchylevel4"": ""0"",
+  ""flags"": ""0xb400"",
+  ""future_use1"": ""2817"",
+  ""future_use5"": ""0x0"",
+  ""http2connection"": ""0"",
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""payloadprotocolid"": ""4294967295"",
+  ""pcap_id"": ""0"",
+  ""repeatcount"": ""1"",
+  ""reportid"": ""0"",
+  ""sctpassociationid"": ""0"",
+  ""sourcelocation"": ""10.0.0.0-10.255.255.255"",
+  ""threat"": ""url"",
+  ""tunnelid"": ""0"",
+  ""type"": ""THREAT"",
+  ""urlcategorylist"": "" Dev Hub access to Github coveo.,computer-and-internet-info,low-risk"",
+  ""urlindex"": ""0"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWCX""
+}",,sirtdatalake/findings/detection_finding/2025/11/17/06/pan_threat/CriblOut-6WLeYv.15.parquet,2025-11-17 06:21:13.000 -0800,2025-11-17 06:21:28.810 Z,,2025-11-16 22:09:58.000 -0800,,,,,"{
+  ""hw_info"": {
+    ""serial_number"": 19901004142
+  },
+  ""name"": ""sjcx-fwcx-01-1""
+}",Allowed,1,,,,,,,,,,2025-11-17 06:09:58.000
+Create,1,,,2,Detection Finding,2004,,,,,,,,"{
+  ""actor"": {
+    ""app_name"": ""web-browsing""
+  },
+  ""connection_info"": {
+    ""direction"": ""Lateral"",
+    ""direction_id"": 3,
+    ""session"": {
+      ""count"": 1,
+      ""uid"": ""2818199""
+    }
+  },
+  ""dst_endpoint"": {
+    ""domain"": ""capgroup.com"",
+    ""interface_name"": ""ethernet1/6.821"",
+    ""ip"": ""10.226.20.30"",
+    ""location"": {
+      ""country"": ""10.0.0.0-10.255.255.255""
+    },
+    ""owner"": null,
+    ""port"": 5985,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""oz-trust""
+  },
+  ""file"": {
+    ""hashes"": ""{}""
+  },
+  ""protocol_name"": ""tcp"",
+  ""src_endpoint"": {
+    ""interface_name"": ""ethernet1/5.701"",
+    ""ip"": ""10.195.4.23"",
+    ""name"": ""sjx1-fwm-pn3"",
+    ""owner"": null,
+    ""port"": 37458,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""oz-untrust""
+  },
+  ""url"": {
+    ""url_string"": ""w177033.cguser.capgroup.com:5985/phprojekt-3.1a/notes/""
+  }
+}","{
+  ""analytic"": {
+    ""name"": ""oz_to_non_prod"",
+    ""type"": ""rule"",
+    ""type_id"": 1,
+    ""uid"": ""dfa24854-fe55-42e7-b031-abb9c1dd3bd5""
+  },
+  ""first_seen_time"": 1763359800,
+  ""title"": ""9999"",
+  ""type"": [
+    ""url"",
+    ""THREAT"",
+    null
+  ],
+  ""uid"": ""9999""
+}",,,,,"{
+  ""event_code"": 9999,
+  ""lables"": [
+    ""pan_logs:threat:source::""
+  ],
+  ""log_provider"": ""pan:threat"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host""
+  ],
+  ""uid"": ""7560206332306531519"",
+  ""version"": ""1.2.0""
+}",,,,,,,Informational,1,,,,,,200401,,"{
+  ""category"": ""stock-advice-and-tools"",
+  ""contenttype"": ""text/html"",
+  ""contentversion"": ""AppThreat-0-0"",
+  ""devicegrouphierarchylevel1"": ""488"",
+  ""devicegrouphierarchylevel2"": ""491"",
+  ""devicegrouphierarchylevel3"": ""524"",
+  ""devicegrouphierarchylevel4"": ""0"",
+  ""flags"": ""0x10b000"",
+  ""future_use1"": ""2817"",
+  ""future_use5"": ""0x0"",
+  ""http2connection"": ""0"",
+  ""httpmethod"": ""get"",
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""payloadprotocolid"": ""4294967295"",
+  ""pcap_id"": ""0"",
+  ""repeatcount"": ""1"",
+  ""reportid"": ""0"",
+  ""sctpassociationid"": ""0"",
+  ""threat"": ""url"",
+  ""tunnelid"": ""0"",
+  ""type"": ""THREAT"",
+  ""urlcategorylist"": "" capgroup_url,stock-advice-and-tools,low-risk"",
+  ""urlindex"": ""1"",
+  ""virtualsystem"": ""vsys1""
+}",,sirtdatalake/findings/detection_finding/2025/11/17/06/pan_threat/CriblOut-6WLeYv.15.parquet,2025-11-17 06:21:13.000 -0800,2025-11-17 06:21:28.810 Z,,2025-11-16 22:09:56.000 -0800,,,,,"{
+  ""hw_info"": {
+    ""serial_number"": 13201009342
+  },
+  ""name"": ""sjx1-fwdc-oz-01-2""
+}",Allowed,1,,,,,,,,,,2025-11-17 06:09:56.000
+Create,1,,,2,Detection Finding,2004,,,,,,,,"{
+  ""actor"": {
+    ""app_name"": ""ssl""
+  },
+  ""connection_info"": {
+    ""direction"": ""Lateral"",
+    ""direction_id"": 3,
+    ""session"": {
+      ""count"": 1,
+      ""uid"": ""537776468""
+    }
+  },
+  ""dst_endpoint"": {
+    ""domain"": ""capgroup.com"",
+    ""interface_name"": ""ethernet1/26.901"",
+    ""ip"": ""10.16.32.17"",
+    ""location"": {
+      ""country"": ""10.0.0.0-10.255.255.255""
+    },
+    ""owner"": null,
+    ""port"": 8088,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""cx-trust.901""
+  },
+  ""file"": {
+    ""hashes"": ""{}""
+  },
+  ""protocol_name"": ""tcp"",
+  ""src_endpoint"": {
+    ""interface_name"": ""ethernet1/25.2004"",
+    ""ip"": ""10.244.145.66"",
+    ""name"": ""sjx1-fwm-pn4"",
+    ""owner"": null,
+    ""port"": 40416,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""cx-aws.digital.dev""
+  },
+  ""url"": {
+    ""url_string"": ""syslogvip.capgroup.com:8088/""
+  }
+}","{
+  ""analytic"": {
+    ""name"": ""aws_and_azure_to_splunk_had"",
+    ""type"": ""rule"",
+    ""type_id"": 1,
+    ""uid"": ""c162f550-3b53-442d-a8f1-f60733164b87""
+  },
+  ""first_seen_time"": 1763359800,
+  ""title"": ""9999"",
+  ""type"": [
+    ""url"",
+    ""THREAT"",
+    null
+  ],
+  ""uid"": ""9999""
+}",,,,,"{
+  ""event_code"": 9999,
+  ""lables"": [
+    ""pan_logs:threat:source::""
+  ],
+  ""log_provider"": ""pan:threat"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host""
+  ],
+  ""uid"": ""7560173865768925493"",
+  ""version"": ""1.2.0""
+}",,,,,,,Informational,1,,,,,,200401,,"{
+  ""category"": ""stock-advice-and-tools"",
+  ""contentversion"": ""AppThreat-0-0"",
+  ""devicegrouphierarchylevel1"": ""461"",
+  ""devicegrouphierarchylevel2"": ""370"",
+  ""devicegrouphierarchylevel3"": ""467"",
+  ""devicegrouphierarchylevel4"": ""0"",
+  ""flags"": ""0x10b400"",
+  ""future_use1"": ""2817"",
+  ""future_use5"": ""0x0"",
+  ""http2connection"": ""0"",
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""payloadprotocolid"": ""4294967295"",
+  ""pcap_id"": ""0"",
+  ""repeatcount"": ""1"",
+  ""reportid"": ""0"",
+  ""sctpassociationid"": ""0"",
+  ""threat"": ""url"",
+  ""tunnelid"": ""0"",
+  ""type"": ""THREAT"",
+  ""urlcategorylist"": "" Helix MCP EKS Cluster Web URLs,stock-advice-and-tools,low-risk"",
+  ""urlindex"": ""0"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWCX""
+}",,sirtdatalake/findings/detection_finding/2025/11/17/06/pan_threat/CriblOut-6WLeYv.15.parquet,2025-11-17 06:21:13.000 -0800,2025-11-17 06:21:28.810 Z,,2025-11-16 22:09:59.000 -0800,,,,,"{
+  ""hw_info"": {
+    ""serial_number"": 19901004142
+  },
+  ""name"": ""sjcx-fwcx-01-1""
+}",Allowed,1,,,,,,,,,,2025-11-17 06:09:59.000
+Create,1,,,2,Detection Finding,2004,,,,,,,,"{
+  ""actor"": {
+    ""app_name"": ""ssl""
+  },
+  ""connection_info"": {
+    ""direction"": ""Outbound"",
+    ""direction_id"": 2,
+    ""session"": {
+      ""count"": 1,
+      ""uid"": ""576501666""
+    }
+  },
+  ""dst_endpoint"": {
+    ""domain"": ""capgroup.com"",
+    ""interface_name"": ""ethernet1/26.901"",
+    ""ip"": ""44.205.87.22"",
+    ""location"": {
+      ""country"": ""United States""
+    },
+    ""owner"": null,
+    ""port"": 443,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""cx-trust.901""
+  },
+  ""file"": {
+    ""hashes"": ""{}""
+  },
+  ""protocol_name"": ""tcp"",
+  ""src_endpoint"": {
+    ""interface_name"": ""ethernet1/25.2101"",
+    ""ip"": ""10.253.209.56"",
+    ""name"": ""sjx1-fwm-pn4"",
+    ""owner"": null,
+    ""port"": 52357,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""cx-aws.int.qa""
+  },
+  ""url"": {
+    ""url_string"": ""us1.ingest.mulesoft.com/""
+  }
+}","{
+  ""analytic"": {
+    ""name"": ""cg_aws_vpcs_to_internet"",
+    ""type"": ""rule"",
+    ""type_id"": 1,
+    ""uid"": ""5d46d4c8-57a9-489f-8dea-c933def66f0e""
+  },
+  ""first_seen_time"": 1763359800,
+  ""title"": ""9999"",
+  ""type"": [
+    ""url"",
+    ""THREAT"",
+    null
+  ],
+  ""uid"": ""9999""
+}",,,,,"{
+  ""event_code"": 9999,
+  ""lables"": [
+    ""pan_logs:threat:source::""
+  ],
+  ""log_provider"": ""pan:threat"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host""
+  ],
+  ""uid"": ""7560173865768926356"",
+  ""version"": ""1.2.0""
+}",,,,,,,Informational,1,,,,,,200401,,"{
+  ""category"": ""computer-and-internet-info"",
+  ""contentversion"": ""AppThreat-0-0"",
+  ""devicegrouphierarchylevel1"": ""461"",
+  ""devicegrouphierarchylevel2"": ""370"",
+  ""devicegrouphierarchylevel3"": ""467"",
+  ""devicegrouphierarchylevel4"": ""0"",
+  ""flags"": ""0xb400"",
+  ""future_use1"": ""2817"",
+  ""future_use5"": ""0x0"",
+  ""http2connection"": ""0"",
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""payloadprotocolid"": ""4294967295"",
+  ""pcap_id"": ""0"",
+  ""repeatcount"": ""1"",
+  ""reportid"": ""0"",
+  ""sctpassociationid"": ""0"",
+  ""sourcelocation"": ""10.0.0.0-10.255.255.255"",
+  ""threat"": ""url"",
+  ""tunnelid"": ""0"",
+  ""type"": ""THREAT"",
+  ""urlcategorylist"": ""computer-and-internet-info,low-risk"",
+  ""urlindex"": ""0"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWCX""
+}",,sirtdatalake/findings/detection_finding/2025/11/17/06/pan_threat/CriblOut-6WLeYv.15.parquet,2025-11-17 06:21:13.000 -0800,2025-11-17 06:21:28.810 Z,,2025-11-16 22:09:59.000 -0800,,,,,"{
+  ""hw_info"": {
+    ""serial_number"": 19901004142
+  },
+  ""name"": ""sjcx-fwcx-01-1""
+}",Allowed,1,,,,,,,,,,2025-11-17 06:09:59.000
+Create,1,,,2,Detection Finding,2004,,,,,,,,"{
+  ""actor"": {
+    ""app_name"": ""ssl""
+  },
+  ""connection_info"": {
+    ""direction"": ""Outbound"",
+    ""direction_id"": 2,
+    ""session"": {
+      ""count"": 1,
+      ""uid"": ""579955702""
+    }
+  },
+  ""dst_endpoint"": {
+    ""domain"": ""capgroup.com"",
+    ""interface_name"": ""ethernet1/26.901"",
+    ""ip"": ""172.67.223.40"",
+    ""location"": {
+      ""country"": ""United States""
+    },
+    ""owner"": null,
+    ""port"": 443,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""cx-trust.901""
+  },
+  ""file"": {
+    ""hashes"": ""{}""
+  },
+  ""protocol_name"": ""tcp"",
+  ""src_endpoint"": {
+    ""interface_name"": ""ethernet1/25.2101"",
+    ""ip"": ""10.243.217.167"",
+    ""name"": ""sjx1-fwm-pn4"",
+    ""owner"": null,
+    ""port"": 58538,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""cx-aws.int.qa""
+  },
+  ""url"": {
+    ""url_string"": ""beacon.etfflows.com/""
+  }
+}","{
+  ""analytic"": {
+    ""category"": ""info-leak"",
+    ""name"": ""cg_aws_vpcs_to_internet"",
+    ""type"": ""rule"",
+    ""type_id"": 1,
+    ""uid"": ""5d46d4c8-57a9-489f-8dea-c933def66f0e""
+  },
+  ""first_seen_time"": 1763359800,
+  ""title"": ""TLS Encrypted Client Hello Extension Detection"",
+  ""type"": [
+    ""vulnerability"",
+    ""THREAT"",
+    ""info-leak""
+  ],
+  ""uid"": ""93031""
+}",,,,,"{
+  ""event_code"": 93031,
+  ""lables"": [
+    ""pan_logs:threat:source::""
+  ],
+  ""log_provider"": ""pan:threat"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host""
+  ],
+  ""uid"": ""7560173865768926404"",
+  ""version"": ""1.2.0""
+}",,,,,,,Informational,1,,,,,,200401,,"{
+  ""category"": ""financial-services"",
+  ""contentversion"": ""AppThreat-9039-9750"",
+  ""devicegrouphierarchylevel1"": ""461"",
+  ""devicegrouphierarchylevel2"": ""370"",
+  ""devicegrouphierarchylevel3"": ""467"",
+  ""devicegrouphierarchylevel4"": ""0"",
+  ""flags"": ""0x2400"",
+  ""future_use1"": ""2817"",
+  ""future_use5"": ""0x0"",
+  ""http2connection"": ""0"",
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""payloadprotocolid"": ""4294967295"",
+  ""pcap_id"": ""0"",
+  ""repeatcount"": ""1"",
+  ""reportid"": ""0"",
+  ""sctpassociationid"": ""0"",
+  ""sourcelocation"": ""10.0.0.0-10.255.255.255"",
+  ""threat"": ""vulnerability"",
+  ""tunnelid"": ""0"",
+  ""type"": ""THREAT"",
+  ""urlindex"": ""0"",
+  ""virtualsystem"": ""vsys1"",
+  ""virtualsystemname"": ""FWCX""
+}",,sirtdatalake/findings/detection_finding/2025/11/17/06/pan_threat/CriblOut-6WLeYv.15.parquet,2025-11-17 06:21:13.000 -0800,2025-11-17 06:21:28.810 Z,,2025-11-16 22:09:59.000 -0800,,,,,"{
+  ""hw_info"": {
+    ""serial_number"": 19901004142
+  },
+  ""name"": ""sjcx-fwcx-01-1""
+}",Allowed,1,,,,,,,,,,2025-11-17 06:09:59.000
+Create,1,,,2,Detection Finding,2004,,,,,,,,"{
+  ""actor"": {
+    ""app_name"": ""web-browsing""
+  },
+  ""connection_info"": {
+    ""direction"": ""Lateral"",
+    ""direction_id"": 3,
+    ""session"": {
+      ""count"": 1,
+      ""uid"": ""4005204""
+    }
+  },
+  ""dst_endpoint"": {
+    ""domain"": ""capgroup.com"",
+    ""interface_name"": ""ethernet1/6.821"",
+    ""ip"": ""10.226.13.230"",
+    ""location"": {
+      ""country"": ""10.0.0.0-10.255.255.255""
+    },
+    ""owner"": {
+      ""full_name"": ""cguser\\ozdevaa00002290s001"",
+      ""name"": ""ozdevaa00002290s001""
+    },
+    ""port"": 5985,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""oz-trust""
+  },
+  ""file"": {
+    ""hashes"": ""{}""
+  },
+  ""protocol_name"": ""tcp"",
+  ""src_endpoint"": {
+    ""interface_name"": ""ethernet1/5.701"",
+    ""ip"": ""10.227.6.251"",
+    ""name"": ""sjx1-fwm-pn3"",
+    ""owner"": {
+      ""full_name"": ""cguser\\vmast__scan"",
+      ""name"": ""vmast__scan""
+    },
+    ""port"": 41940,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""oz-untrust""
+  },
+  ""url"": {
+    ""url_string"": ""w039855.cguser.capgroup.com:5985/2014/users/5/shipping_addresses""
+  }
+}","{
+  ""analytic"": {
+    ""name"": ""oz_to_non_prod"",
+    ""type"": ""rule"",
+    ""type_id"": 1,
+    ""uid"": ""dfa24854-fe55-42e7-b031-abb9c1dd3bd5""
+  },
+  ""first_seen_time"": 1763359800,
+  ""title"": ""9999"",
+  ""type"": [
+    ""url"",
+    ""THREAT"",
+    null
+  ],
+  ""uid"": ""9999""
+}",,,,,"{
+  ""event_code"": 9999,
+  ""lables"": [
+    ""pan_logs:threat:source::""
+  ],
+  ""log_provider"": ""pan:threat"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host""
+  ],
+  ""uid"": ""7560206332306533279"",
+  ""version"": ""1.2.0""
+}",,,,,,,Informational,1,,,,,,200401,,"{
+  ""category"": ""stock-advice-and-tools"",
+  ""contenttype"": ""text/html"",
+  ""contentversion"": ""AppThreat-0-0"",
+  ""devicegrouphierarchylevel1"": ""488"",
+  ""devicegrouphierarchylevel2"": ""491"",
+  ""devicegrouphierarchylevel3"": ""524"",
+  ""devicegrouphierarchylevel4"": ""0"",
+  ""flags"": ""0x10b000"",
+  ""future_use1"": ""2817"",
+  ""future_use5"": ""0x0"",
+  ""http2connection"": ""0"",
+  ""httpmethod"": ""get"",
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""payloadprotocolid"": ""4294967295"",
+  ""pcap_id"": ""0"",
+  ""repeatcount"": ""1"",
+  ""reportid"": ""0"",
+  ""sctpassociationid"": ""0"",
+  ""threat"": ""url"",
+  ""tunnelid"": ""0"",
+  ""type"": ""THREAT"",
+  ""urlcategorylist"": "" capgroup_url,stock-advice-and-tools,low-risk"",
+  ""urlindex"": ""1"",
+  ""virtualsystem"": ""vsys1""
+}",,sirtdatalake/findings/detection_finding/2025/11/17/06/pan_threat/CriblOut-6WLeYv.15.parquet,2025-11-17 06:21:13.000 -0800,2025-11-17 06:21:28.810 Z,,2025-11-16 22:09:57.000 -0800,,,,,"{
+  ""hw_info"": {
+    ""serial_number"": 13201009342
+  },
+  ""name"": ""sjx1-fwdc-oz-01-2""
+}",Allowed,1,,,,,,,,,,2025-11-17 06:09:57.000
+Create,1,,,2,Detection Finding,2004,,,,,,,,"{
+  ""actor"": {
+    ""app_name"": ""web-browsing""
+  },
+  ""connection_info"": {
+    ""direction"": ""Lateral"",
+    ""direction_id"": 3,
+    ""session"": {
+      ""count"": 1,
+      ""uid"": ""3200176""
+    }
+  },
+  ""dst_endpoint"": {
+    ""domain"": ""capgroup.com"",
+    ""interface_name"": ""ethernet1/6.821"",
+    ""ip"": ""10.226.20.99"",
+    ""location"": {
+      ""country"": ""10.0.0.0-10.255.255.255""
+    },
+    ""owner"": {
+      ""full_name"": ""cguser\\pk7it7h0fsvcacct"",
+      ""name"": ""pk7it7h0fsvcacct""
+    },
+    ""port"": 80,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""oz-trust""
+  },
+  ""file"": {
+    ""hashes"": ""{}""
+  },
+  ""protocol_name"": ""tcp"",
+  ""src_endpoint"": {
+    ""interface_name"": ""ethernet1/5.701"",
+    ""ip"": ""10.195.4.23"",
+    ""name"": ""sjx1-fwm-pn3"",
+    ""owner"": null,
+    ""port"": 42170,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""oz-untrust""
+  },
+  ""url"": {
+    ""url_string"": ""w433975.cguser.capgroup.com/jquery/""
+  }
+}","{
+  ""analytic"": {
+    ""name"": ""oz_to_non_prod"",
+    ""type"": ""rule"",
+    ""type_id"": 1,
+    ""uid"": ""dfa24854-fe55-42e7-b031-abb9c1dd3bd5""
+  },
+  ""first_seen_time"": 1763359800,
+  ""title"": ""9999"",
+  ""type"": [
+    ""url"",
+    ""THREAT"",
+    null
+  ],
+  ""uid"": ""9999""
+}",,,,,"{
+  ""event_code"": 9999,
+  ""lables"": [
+    ""pan_logs:threat:source::""
+  ],
+  ""log_provider"": ""pan:threat"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host""
+  ],
+  ""uid"": ""7560206332306534481"",
+  ""version"": ""1.2.0""
+}",,,,,,,Informational,1,,,,,,200401,,"{
+  ""category"": ""stock-advice-and-tools"",
+  ""contenttype"": ""text/html"",
+  ""contentversion"": ""AppThreat-0-0"",
+  ""devicegrouphierarchylevel1"": ""488"",
+  ""devicegrouphierarchylevel2"": ""491"",
+  ""devicegrouphierarchylevel3"": ""524"",
+  ""devicegrouphierarchylevel4"": ""0"",
+  ""flags"": ""0xb000"",
+  ""future_use1"": ""2817"",
+  ""future_use5"": ""0x0"",
+  ""http2connection"": ""0"",
+  ""httpmethod"": ""get"",
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""payloadprotocolid"": ""4294967295"",
+  ""pcap_id"": ""0"",
+  ""repeatcount"": ""1"",
+  ""reportid"": ""0"",
+  ""sctpassociationid"": ""0"",
+  ""threat"": ""url"",
+  ""tunnelid"": ""0"",
+  ""type"": ""THREAT"",
+  ""urlcategorylist"": "" capgroup_url,stock-advice-and-tools,low-risk"",
+  ""urlindex"": ""1"",
+  ""virtualsystem"": ""vsys1""
+}",,sirtdatalake/findings/detection_finding/2025/11/17/06/pan_threat/CriblOut-6WLeYv.15.parquet,2025-11-17 06:21:13.000 -0800,2025-11-17 06:21:28.810 Z,,2025-11-16 22:09:58.000 -0800,,,,,"{
+  ""hw_info"": {
+    ""serial_number"": 13201009342
+  },
+  ""name"": ""sjx1-fwdc-oz-01-2""
+}",Allowed,1,,,,,,,,,,2025-11-17 06:09:58.000
+Create,1,,,2,Detection Finding,2004,,,,,,,,"{
+  ""actor"": {
+    ""app_name"": ""web-browsing""
+  },
+  ""connection_info"": {
+    ""direction"": ""Lateral"",
+    ""direction_id"": 3,
+    ""session"": {
+      ""count"": 1,
+      ""uid"": ""749649""
+    }
+  },
+  ""dst_endpoint"": {
+    ""domain"": ""capgroup.com"",
+    ""interface_name"": ""ethernet1/6.821"",
+    ""ip"": ""10.226.19.152"",
+    ""location"": {
+      ""country"": ""10.0.0.0-10.255.255.255""
+    },
+    ""owner"": {
+      ""full_name"": ""cguser\\sqljob"",
+      ""name"": ""sqljob""
+    },
+    ""port"": 8082,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""oz-trust""
+  },
+  ""file"": {
+    ""hashes"": ""{}""
+  },
+  ""protocol_name"": ""tcp"",
+  ""src_endpoint"": {
+    ""interface_name"": ""ethernet1/5.701"",
+    ""ip"": ""10.194.4.26"",
+    ""name"": ""sjx1-fwm-pn3"",
+    ""owner"": null,
+    ""port"": 45768,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""oz-untrust""
+  },
+  ""url"": {
+    ""url_string"": ""w547187.cguser.capgroup.com:8082/backofficeLite/""
+  }
+}","{
+  ""analytic"": {
+    ""name"": ""oz_to_oz"",
+    ""type"": ""rule"",
+    ""type_id"": 1,
+    ""uid"": ""58aab294-4d08-4903-bc19-b0035945eb61""
+  },
+  ""first_seen_time"": 1763359800,
+  ""title"": ""9999"",
+  ""type"": [
+    ""url"",
+    ""THREAT"",
+    null
+  ],
+  ""uid"": ""9999""
+}",,,,,"{
+  ""event_code"": 9999,
+  ""lables"": [
+    ""pan_logs:threat:source::""
+  ],
+  ""log_provider"": ""pan:threat"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host""
+  ],
+  ""uid"": ""7560206332306532316"",
+  ""version"": ""1.2.0""
+}",,,,,,,Informational,1,,,,,,200401,,"{
+  ""category"": ""stock-advice-and-tools"",
+  ""contentversion"": ""AppThreat-0-0"",
+  ""devicegrouphierarchylevel1"": ""488"",
+  ""devicegrouphierarchylevel2"": ""491"",
+  ""devicegrouphierarchylevel3"": ""524"",
+  ""devicegrouphierarchylevel4"": ""0"",
+  ""flags"": ""0x10b000"",
+  ""future_use1"": ""2817"",
+  ""future_use5"": ""0x0"",
+  ""http2connection"": ""0"",
+  ""httpmethod"": ""get"",
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""payloadprotocolid"": ""4294967295"",
+  ""pcap_id"": ""0"",
+  ""repeatcount"": ""1"",
+  ""reportid"": ""0"",
+  ""sctpassociationid"": ""0"",
+  ""threat"": ""url"",
+  ""tunnelid"": ""0"",
+  ""type"": ""THREAT"",
+  ""urlcategorylist"": "" capgroup_url,stock-advice-and-tools,low-risk"",
+  ""urlindex"": ""169"",
+  ""virtualsystem"": ""vsys1""
+}",,sirtdatalake/findings/detection_finding/2025/11/17/06/pan_threat/CriblOut-6WLeYv.15.parquet,2025-11-17 06:21:13.000 -0800,2025-11-17 06:21:28.810 Z,,2025-11-16 22:09:57.000 -0800,,,,,"{
+  ""hw_info"": {
+    ""serial_number"": 13201009342
+  },
+  ""name"": ""sjx1-fwdc-oz-01-2""
+}",Allowed,1,,,,,,,,,,2025-11-17 06:09:57.000
+Create,1,,,2,Detection Finding,2004,,,,,,,,"{
+  ""actor"": {
+    ""app_name"": ""web-browsing""
+  },
+  ""connection_info"": {
+    ""direction"": ""Lateral"",
+    ""direction_id"": 3,
+    ""session"": {
+      ""count"": 1,
+      ""uid"": ""536467""
+    }
+  },
+  ""dst_endpoint"": {
+    ""domain"": ""capgroup.com"",
+    ""interface_name"": ""ethernet1/6.821"",
+    ""ip"": ""10.226.5.14"",
+    ""location"": {
+      ""country"": ""10.0.0.0-10.255.255.255""
+    },
+    ""owner"": {
+      ""full_name"": ""cguser\\x_vmast"",
+      ""name"": ""x_vmast""
+    },
+    ""port"": 9041,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""oz-trust""
+  },
+  ""file"": {
+    ""hashes"": ""{}""
+  },
+  ""protocol_name"": ""tcp"",
+  ""src_endpoint"": {
+    ""interface_name"": ""ethernet1/5.701"",
+    ""ip"": ""10.195.4.24"",
+    ""name"": ""sjx1-fwm-pn3"",
+    ""owner"": null,
+    ""port"": 53580,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""oz-untrust""
+  },
+  ""url"": {
+    ""url_string"": ""x222279.cguser.capgroup.com:9041/2015/users/7/shipping_addresses""
+  }
+}","{
+  ""analytic"": {
+    ""name"": ""oz_to_non_prod"",
+    ""type"": ""rule"",
+    ""type_id"": 1,
+    ""uid"": ""dfa24854-fe55-42e7-b031-abb9c1dd3bd5""
+  },
+  ""first_seen_time"": 1763359800,
+  ""title"": ""9999"",
+  ""type"": [
+    ""url"",
+    ""THREAT"",
+    null
+  ],
+  ""uid"": ""9999""
+}",,,,,"{
+  ""event_code"": 9999,
+  ""lables"": [
+    ""pan_logs:threat:source::""
+  ],
+  ""log_provider"": ""pan:threat"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host""
+  ],
+  ""uid"": ""7560206332306525383"",
+  ""version"": ""1.2.0""
+}",,,,,,,Informational,1,,,,,,200401,,"{
+  ""category"": ""stock-advice-and-tools"",
+  ""contenttype"": ""application/hal+json"",
+  ""contentversion"": ""AppThreat-0-0"",
+  ""devicegrouphierarchylevel1"": ""488"",
+  ""devicegrouphierarchylevel2"": ""491"",
+  ""devicegrouphierarchylevel3"": ""524"",
+  ""devicegrouphierarchylevel4"": ""0"",
+  ""flags"": ""0x103000"",
+  ""future_use1"": ""2817"",
+  ""future_use5"": ""0x0"",
+  ""http2connection"": ""0"",
+  ""httpmethod"": ""get"",
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""payloadprotocolid"": ""4294967295"",
+  ""pcap_id"": ""0"",
+  ""repeatcount"": ""1"",
+  ""reportid"": ""0"",
+  ""sctpassociationid"": ""0"",
+  ""threat"": ""url"",
+  ""tunnelid"": ""0"",
+  ""type"": ""THREAT"",
+  ""urlcategorylist"": "" capgroup_url,stock-advice-and-tools,low-risk"",
+  ""urlindex"": ""14"",
+  ""virtualsystem"": ""vsys1""
+}",,sirtdatalake/findings/detection_finding/2025/11/17/06/pan_threat/CriblOut-6WLeYv.15.parquet,2025-11-17 06:21:13.000 -0800,2025-11-17 06:21:28.810 Z,,2025-11-16 22:09:53.000 -0800,,,,,"{
+  ""hw_info"": {
+    ""serial_number"": 13201009342
+  },
+  ""name"": ""sjx1-fwdc-oz-01-2""
+}",Allowed,1,,,,,,,,,,2025-11-17 06:09:53.000
+Create,1,,,2,Detection Finding,2004,,,,,,,,"{
+  ""actor"": {
+    ""app_name"": ""web-browsing""
+  },
+  ""connection_info"": {
+    ""direction"": ""Lateral"",
+    ""direction_id"": 3,
+    ""session"": {
+      ""count"": 1,
+      ""uid"": ""1084274""
+    }
+  },
+  ""dst_endpoint"": {
+    ""domain"": ""capgroup.com"",
+    ""interface_name"": ""ethernet1/6.821"",
+    ""ip"": ""10.226.22.23"",
+    ""location"": {
+      ""country"": ""10.0.0.0-10.255.255.255""
+    },
+    ""owner"": {
+      ""full_name"": ""cguser\\ozdevaa00002705s01"",
+      ""name"": ""ozdevaa00002705s01""
+    },
+    ""port"": 5985,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""oz-trust""
+  },
+  ""file"": {
+    ""hashes"": ""{}""
+  },
+  ""protocol_name"": ""tcp"",
+  ""src_endpoint"": {
+    ""interface_name"": ""ethernet1/5.701"",
+    ""ip"": ""10.227.7.226"",
+    ""name"": ""sjx1-fwm-pn3"",
+    ""owner"": {
+      ""full_name"": ""cguser\\vmast__scan"",
+      ""name"": ""vmast__scan""
+    },
+    ""port"": 39828,
+    ""proxy_endpoint"": {
+      ""ip"": ""0.0.0.0"",
+      ""port"": 0
+    },
+    ""zone"": ""oz-untrust""
+  },
+  ""url"": {
+    ""url_string"": ""w554654.cguser.capgroup.com:5985/content/plugins/content/allvideoshareplayer/""
+  }
+}","{
+  ""analytic"": {
+    ""name"": ""oz_to_non_prod"",
+    ""type"": ""rule"",
+    ""type_id"": 1,
+    ""uid"": ""dfa24854-fe55-42e7-b031-abb9c1dd3bd5""
+  },
+  ""first_seen_time"": 1763359800,
+  ""title"": ""9999"",
+  ""type"": [
+    ""url"",
+    ""THREAT"",
+    null
+  ],
+  ""uid"": ""9999""
+}",,,,,"{
+  ""event_code"": 9999,
+  ""lables"": [
+    ""pan_logs:threat:source::""
+  ],
+  ""log_provider"": ""pan:threat"",
+  ""product"": {
+    ""name"": ""pan_logs""
+  },
+  ""profiles"": [
+    ""Host""
+  ],
+  ""uid"": ""7560206332306527507"",
+  ""version"": ""1.2.0""
+}",,,,,,,Informational,1,,,,,,200401,,"{
+  ""category"": ""stock-advice-and-tools"",
+  ""contenttype"": ""text/html"",
+  ""contentversion"": ""AppThreat-0-0"",
+  ""devicegrouphierarchylevel1"": ""488"",
+  ""devicegrouphierarchylevel2"": ""491"",
+  ""devicegrouphierarchylevel3"": ""524"",
+  ""devicegrouphierarchylevel4"": ""0"",
+  ""flags"": ""0x10b000"",
+  ""future_use1"": ""2817"",
+  ""future_use5"": ""0x0"",
+  ""http2connection"": ""0"",
+  ""httpmethod"": ""get"",
+  ""logaction"": ""default"",
+  ""natdestinationport"": ""0"",
+  ""natsourceport"": ""0"",
+  ""parentsessionid"": ""0"",
+  ""payloadprotocolid"": ""4294967295"",
+  ""pcap_id"": ""0"",
+  ""repeatcount"": ""1"",
+  ""reportid"": ""0"",
+  ""sctpassociationid"": ""0"",
+  ""threat"": ""url"",
+  ""tunnelid"": ""0"",
+  ""type"": ""THREAT"",
+  ""urlcategorylist"": "" capgroup_url,stock-advice-and-tools,low-risk"",
+  ""urlindex"": ""1"",
+  ""virtualsystem"": ""vsys1""
+}",,sirtdatalake/findings/detection_finding/2025/11/17/06/pan_threat/CriblOut-6WLeYv.15.parquet,2025-11-17 06:21:13.000 -0800,2025-11-17 06:21:28.810 Z,,2025-11-16 22:09:54.000 -0800,,,,,"{
+  ""hw_info"": {
+    ""serial_number"": 13201009342
+  },
+  ""name"": ""sjx1-fwdc-oz-01-2""
+}",Allowed,1,,,,,,,,,,2025-11-17 06:09:54.000
