@@ -2,11 +2,12 @@
 # MAGIC %md
 # MAGIC # User and Entity Behavior Analytics (UEBA) Detection System with MLflow
 # MAGIC
-# MAGIC This notebook implements a comprehensive UEBA detection system with full MLflow integration:
+# MAGIC This notebook implements a comprehensive UEBA detection system with full MLflow integration for **air-gapped/offline environments**:
 # MAGIC - **MLflow Experiment Tracking** - Parameters, metrics, and artifacts
 # MAGIC - **Model Registry** - Unity Catalog registration
 # MAGIC - **Model Serving** - Endpoint deployment for real-time scoring
 # MAGIC - **Custom PyFunc** - Production-ready inference wrapper
+# MAGIC - **Air-gapped Deployment** - Uses `mlflow.models.utils.add_libraries_to_model()` to automatically bundle dependencies without internet access
 # MAGIC
 # MAGIC **Detection Techniques:**
 # MAGIC - Peer Group Analysis (K-Means clustering)
@@ -14,6 +15,10 @@
 # MAGIC - Anomaly Scoring (Statistical + ML)
 # MAGIC - Risk Aggregation
 # MAGIC - Detection Finding Generation
+# MAGIC
+# MAGIC **Key Feature:**
+# MAGIC Instead of manually downloading wheels, this notebook uses `add_libraries_to_model()` to automatically resolve and package all Python dependencies (lz4, scikit-learn, numpy, pandas, etc.) directly into the MLflow model artifact, enabling deployment in restricted/air-gapped Databricks environments without internet connectivity.
+# MAGIC
 
 # COMMAND ----------
 
@@ -666,47 +671,50 @@ class UEBAAnomalyDetector(mlflow.pyfunc.PythonModel):
 
 # COMMAND ----------
 
-with mlflow.start_run(run_name="UEBA_Custom_PyFunc_Model", nested=True) as pyfunc_run:
+import mlflow
+import os
 
-    print("Registering custom PyFunc model...")
+# Define model artifacts
+artifacts = {
+    "model": f"runs:/{ml_run_id}/isolation_forest",
+    "scaler": "/tmp/scaler.pkl",
+    "feature_cols": "/tmp/feature_cols.json",
+    "norm_params": "/dbfs/tmp/normalization_params.json",
+}
 
-    # Define artifacts needed by the model
-    artifacts = {
-        "model": f"runs:/{ml_run_id}/isolation_forest",
-        "scaler": "/tmp/scaler.pkl",
-        "feature_cols": "/tmp/feature_cols.json",
-        "norm_params": "/dbfs/tmp/normalization_params.json"
-    }
+# Create example input
+example_input = ml_features_pd[feature_cols].head(1)
 
-    # Save norm_params to DBFS
-    import json
-    with open("/dbfs/tmp/normalization_params.json", "w") as f:
-        json.dump(norm_params, f)
+# Use pip_requirements with package names only (not wheel paths)
+# MLflow will use the wheels from code_paths to satisfy these requirements
+pip_requirements = [
+    "lz4==4.3.3",
+]
 
-    # Create example input for signature
-    example_input = ml_features_pd[feature_cols].head(1)
-
-    # Log custom model
+with mlflow.start_run(run_name="UEBA_Model_With_Wheels_Fixed", nested=True) as run:
     model_info = mlflow.pyfunc.log_model(
         artifact_path="ueba_pyfunc_model",
         python_model=UEBAAnomalyDetector(),
         artifacts=artifacts,
         input_example=example_input,
         registered_model_name=MODEL_NAME,
-        pip_requirements=[
-            "scikit-learn==1.3.0",
-            "pandas>=1.5.3,<3.0.0",
-            "numpy<2.0.0"
-            "cloudpickle==2.2.1"
-        ]
+        # code_paths=wheel_files,  # Wheels will be copied to model artifact
+        pip_requirements=pip_requirements,  # Package names, not paths
     )
-
-    print(f"✓ Custom PyFunc model registered as {MODEL_NAME}")
-    pyfunc_run_id = pyfunc_run.info.run_id
+    
+    latest_version = model_info.registered_model_version
+    print(f"\n✓ Model registered: {MODEL_NAME} version {latest_version}")
+    print(f"✓ Wheels packaged in model artifact")
+    print(f"✓ Pip will install from local wheels when available")
+    
+    pyfunc_run_id = run.info.run_id
+    
+print(f"\nModel URI: models:/{MODEL_NAME}/{latest_version}")
 
 # COMMAND ----------
 
-model_info.registered_model_version
+import mlflow.models.utils
+model_info = mlflow.models.utils.add_libraries_to_model(f'models:/{MODEL_NAME}/{latest_version}')
 
 # COMMAND ----------
 
@@ -723,7 +731,7 @@ from databricks.sdk.service.serving import (
 )
 
 w = WorkspaceClient()
-
+ENDPOINT_NAME = "ueba-anomaly-scoring-pip"
 print(f"Deploying model {MODEL_NAME} to endpoint {ENDPOINT_NAME}...")
 
 try:
@@ -778,7 +786,7 @@ try:
     w.serving_endpoints.wait_get_serving_endpoint_not_updating(ENDPOINT_NAME)
 
     print(f"✓ Endpoint {ENDPOINT_NAME} is ready!")
-    print(f"\nEndpoint URL: https://{w.config.host}/serving-endpoints/{ENDPOINT_NAME}/invocations")
+    print(f"\nEndpoint URL: {w.config.host}/serving-endpoints/{ENDPOINT_NAME}/invocations")
 
 except Exception as e:
     print(f"Error deploying endpoint: {e}")

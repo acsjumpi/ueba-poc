@@ -323,7 +323,7 @@ daily_analysis_network = analysis_network.groupBy("user", "date").agg(
     max(hour("event_time")).alias("last_activity_hour"),
 
     # Anomaly indicators
-    sum(when(col("is_anomaly") == True, 1).otherwise(0)).alias("known_anomalies")
+    # sum(when(col("is_anomaly") == True, 1).otherwise(0)).alias("known_anomalies")
 )
 
 # Join with baselines
@@ -431,7 +431,7 @@ if process_raw:
         ), 1).otherwise(0)).alias("admin_process_count"),
 
         # Suspicious process indicator
-        sum(when(col("is_anomaly") == True, 1).otherwise(0)).alias("suspicious_process_count")
+        # sum(when(col("is_anomaly") == True, 1).otherwise(0)).alias("suspicious_process_count")
     )
 
     # Join with baselines

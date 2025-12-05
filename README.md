@@ -1,6 +1,6 @@
 # User and Entity Behavior Analytics (UEBA) POC
 
-A comprehensive proof-of-concept for User and Entity Behavior Analytics (UEBA) on Databricks, detecting anomalous user behavior through statistical analysis, machine learning, and behavioral baselining.
+A comprehensive proof-of-concept for User and Entity Behavior Analytics (UEBA) on Databricks, detecting anomalous user behavior through statistical analysis, machine learning, and behavioral baselining. Includes full MLflow integration for experiment tracking, model registry, and serving endpoints with support for air-gapped/offline deployments.
 
 ## Table of Contents
 
@@ -10,6 +10,7 @@ A comprehensive proof-of-concept for User and Entity Behavior Analytics (UEBA) o
 - [Data Sources](#data-sources)
 - [Detection Techniques](#detection-techniques)
 - [Models Used](#models-used)
+- [MLflow Integration](#mlflow-integration)
 - [Setup Instructions](#setup-instructions)
 - [Execution Steps](#execution-steps)
 - [Sample Outputs](#sample-outputs)
@@ -30,6 +31,12 @@ This UEBA POC analyzes network and process activity to detect anomalous user beh
 - After-hours suspicious activity
 
 The system uses a combination of statistical methods and machine learning to establish behavioral baselines and detect deviations from normal patterns.
+
+**Three Implementation Approaches:**
+
+1. **Basic Statistical Analysis** ([01_ueba_detection_analysis.py](notebooks/01_ueba_detection_analysis.py)) - Pure statistical anomaly detection using Z-scores and K-means clustering
+2. **MLflow-Integrated with Air-gapped Deployment** ([02_ueba_detection_analysis_with_mlflow_add_libraries.py](notebooks/02_ueba_detection_analysis_with_mlflow_add_libraries%20%28Airgapped%20Final%20Version%29.py)) - Full MLflow tracking, model registry, and serving endpoints optimized for restricted/air-gapped environments
+3. **Synthetic Data Generator** ([00_generate_synthetic_data.py](notebooks/00_generate_synthetic_data.py)) - Generates realistic test data for POC validation
 
 ---
 
@@ -338,14 +345,213 @@ User B: Moderate bytes (Z=2.1), high destinations (Z=2.3), after-hours
 
 ---
 
+## MLflow Integration
+
+The MLflow-integrated version ([02_ueba_detection_analysis_with_mlflow_add_libraries.py](notebooks/02_ueba_detection_analysis_with_mlflow_add_libraries%20%28Airgapped%20Final%20Version%29.py)) provides enterprise-grade model lifecycle management with full support for air-gapped/offline deployments.
+
+### Key Features
+
+1. **Experiment Tracking**
+   - All analysis parameters logged (baseline days, thresholds, K-means settings)
+   - Performance metrics tracked (anomaly counts, risk distribution)
+   - Artifacts saved (normalization params, feature names, trained models)
+
+2. **Model Registry (Unity Catalog)**
+   - Custom PyFunc model wrapping Isolation Forest
+   - Automatic version management
+   - Model lineage and metadata tracking
+   - Registry format: `{catalog}.{schema}.ueba_anomaly_detector`
+
+3. **Model Serving Endpoints**
+   - Real-time scoring API deployment
+   - Auto-scaling with scale-to-zero capability
+   - Automatic request/response logging
+   - REST API for integration with SIEM/SOAR
+
+4. **Air-gapped Deployment** ⭐
+   - Uses `mlflow.models.utils.add_libraries_to_model()` to automatically bundle dependencies
+   - No internet access required during model deployment
+   - All Python packages (lz4, scikit-learn, numpy, pandas) packaged into model artifact
+   - Perfect for restricted/high-security environments
+
+### Custom PyFunc Model
+
+The `UEBAAnomalyDetector` class wraps the Isolation Forest model with preprocessing:
+
+```python
+class UEBAAnomalyDetector(mlflow.pyfunc.PythonModel):
+    """
+    Custom MLflow PyFunc model for UEBA anomaly detection.
+    Includes preprocessing, scaling, and risk level assignment.
+    """
+
+    def load_context(self, context):
+        # Load scaler, feature definitions, and trained model
+        self.scaler = pickle.load(context.artifacts["scaler"])
+        self.iso_forest = mlflow.sklearn.load_model(context.artifacts["model"])
+        self.norm_params = json.load(context.artifacts["norm_params"])
+
+    def predict(self, context, model_input):
+        # Scale features, predict anomalies, return risk scores
+        X_scaled = self.scaler.transform(model_input)
+        predictions = self.iso_forest.predict(X_scaled)
+        risk_scores = self._calculate_risk_scores(predictions)
+        return risk_scores
+```
+
+### Model Deployment Workflow
+
+```python
+# 1. Log model with dependencies
+with mlflow.start_run():
+    model_info = mlflow.pyfunc.log_model(
+        artifact_path="ueba_pyfunc_model",
+        python_model=UEBAAnomalyDetector(),
+        artifacts=artifacts,
+        registered_model_name=MODEL_NAME,
+        pip_requirements=["lz4==4.3.3"]  # Minimal requirements
+    )
+
+# 2. Add libraries for air-gapped deployment
+model_info = mlflow.models.utils.add_libraries_to_model(
+    f'models:/{MODEL_NAME}/{version}'
+)
+
+# 3. Deploy to serving endpoint
+w.serving_endpoints.create(
+    name=ENDPOINT_NAME,
+    config=EndpointCoreConfigInput(
+        served_entities=[
+            ServedEntityInput(
+                entity_name=MODEL_NAME,
+                entity_version=version,
+                workload_size="Small",
+                scale_to_zero_enabled=True
+            )
+        ]
+    )
+)
+```
+
+### API Usage
+
+**Python SDK:**
+```python
+from databricks.sdk import WorkspaceClient
+
+w = WorkspaceClient()
+response = w.serving_endpoints.query(
+    name="ueba-anomaly-scoring",
+    dataframe_records=[{
+        "baseline_avg_events": 150.0,
+        "baseline_std_events": 25.0,
+        "baseline_avg_bytes_out": 500000.0,
+        "baseline_std_bytes_out": 100000.0,
+        "baseline_avg_destinations": 10.0,
+        "baseline_std_destinations": 3.0,
+        "baseline_typical_start_hour": 9.0,
+        "baseline_typical_end_hour": 17.0,
+        "peer_group": 2
+    }]
+)
+```
+
+**REST API:**
+```bash
+curl -X POST https://<databricks-host>/serving-endpoints/ueba-anomaly-scoring/invocations \
+  -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "dataframe_records": [{
+      "baseline_avg_events": 150.0,
+      "baseline_std_events": 25.0,
+      "baseline_avg_bytes_out": 500000.0,
+      "peer_group": 2
+    }]
+  }'
+```
+
+**Response:**
+```json
+{
+  "predictions": [{
+    "user": "test_user",
+    "is_anomaly": 1,
+    "anomaly_score": -0.234,
+    "risk_score": 0.876,
+    "risk_level": "CRITICAL",
+    "peer_group": 2
+  }]
+}
+```
+
+### Experiment Tracking Output
+
+```
+MLflow Tracking:
+  Experiment: /Users/<user>/UEBA_Detection_MLflow
+  Main Run ID: abc123def456
+  Model Run ID: xyz789ghi012
+  Experiment URL: <tracking_uri>/#/experiments/<id>
+
+Parameters Logged:
+  - baseline_days: 21
+  - analysis_days: 7
+  - clustering_k: 5
+  - zscore_threshold: 2.5
+  - risk_threshold_high: 0.7
+  - risk_threshold_critical: 0.85
+  - contamination: 0.08
+  - n_estimators: 100
+
+Metrics Logged:
+  - network_events_loaded: 42150
+  - n_users_baseline: 50
+  - kmeans_k: 5
+  - kmeans_cost: 127.45
+  - total_anomalies: 23
+  - critical_anomalies: 3
+  - high_anomalies: 8
+  - n_ml_anomalies: 4
+  - users_critical: 2
+  - users_high: 5
+  - users_medium: 8
+
+Artifacts Saved:
+  - normalization_params.json
+  - scaler.pkl
+  - feature_cols.json
+  - isolation_forest/model.pkl
+```
+
+### Benefits of MLflow Integration
+
+1. **Reproducibility** - All parameters and artifacts versioned
+2. **Auditability** - Complete lineage tracking for compliance
+3. **Operationalization** - Easy deployment to production endpoints
+4. **Monitoring** - Built-in model performance tracking
+5. **Air-gapped Support** - Deploy in restricted environments without internet
+6. **Collaboration** - Share experiments and models across teams
+7. **A/B Testing** - Deploy multiple model versions simultaneously
+
+---
+
 ## Setup Instructions
 
 ### Prerequisites
 
+**Basic Requirements (both notebooks):**
 - Databricks workspace (Runtime 13.x+ recommended)
 - Unity Catalog enabled
 - Python 3.9+
 - Spark 3.4+
+
+**Additional Requirements for MLflow Version:**
+- MLflow 2.21.2+
+- Model Serving enabled in workspace
+- Permissions to create serving endpoints
+- Unity Catalog model registry access
+- For air-gapped deployments: No special requirements (dependencies bundled automatically)
 
 ### 1. Create Catalog and Schemas
 
@@ -415,18 +621,34 @@ Anomalous process events: 253 (3.00%)
 
 ### Step 2: Run UEBA Detection Analysis
 
-Run the main UEBA analysis notebook:
+Choose one of the analysis notebooks based on your requirements:
 
+**Option A: Basic Statistical Analysis (Fastest)**
 ```bash
 # In Databricks
 Run notebook: notebooks/01_ueba_detection_analysis.py
 ```
+- Pure statistical anomaly detection
+- No ML model training or deployment
+- Ideal for quick POC validation
 
-**What it does**:
+**Option B: MLflow-Integrated with Air-gapped Deployment (Production-Ready)**
+```bash
+# In Databricks
+Run notebook: notebooks/02_ueba_detection_analysis_with_mlflow_add_libraries (Airgapped Final Version).py
+```
+- Full MLflow experiment tracking
+- ML model training (Isolation Forest)
+- Model registry and serving endpoint deployment
+- Air-gapped deployment support using `add_libraries_to_model()`
+- Production-ready with API endpoints
+
+**What it does (both options)**:
 
 1. **Load Data** (Sections 1-2)
    - Load network and process activity
    - Determine analysis time periods
+   - Initialize MLflow (Option B only)
 
 2. **Feature Engineering** (Sections 3-4)
    - Calculate daily aggregations
@@ -441,28 +663,38 @@ Run notebook: notebooks/01_ueba_detection_analysis.py
    - Run K-means clustering
    - Assign users to peer groups
    - Show peer group characteristics
+   - Log clustering metrics to MLflow (Option B only)
 
 5. **Anomaly Detection** (Sections 6-7)
    - Calculate Z-scores for current period
    - Detect temporal anomalies (after-hours)
    - Score process anomalies
    - Identify outliers
+   - Train Isolation Forest model (Option B only)
 
 6. **Risk Scoring** (Section 8)
    - Aggregate network and process risks
    - Calculate composite risk scores
    - Assign risk levels (CRITICAL, HIGH, MEDIUM, LOW)
 
-7. **Generate Findings** (Section 9)
+7. **Model Packaging & Deployment** (Sections 9-12, Option B only)
+   - Create custom PyFunc wrapper
+   - Register model to Unity Catalog
+   - Use `add_libraries_to_model()` for air-gapped deployment
+   - Deploy serving endpoint
+   - Test real-time scoring API
+
+8. **Generate Findings** (Section 13-14)
    - Create detection findings for anomalies
    - Include evidence and context
    - Recommend actions
 
-8. **Save Results** (Section 10)
+9. **Save Results** (Section 15)
    - Save findings to `detection_finding` table
    - Persist risk scores
+   - Log all artifacts to MLflow (Option B only)
 
-**Sample Output**:
+**Sample Output (Option A - Basic)**:
 ```
 UEBA DETECTION SYSTEM - ANALYSIS SUMMARY
 ========================================
@@ -496,7 +728,91 @@ High-Risk Users: 7
   ...
 ```
 
-### Step 3: Review Detection Findings
+**Sample Output (Option B - MLflow)**:
+```
+UEBA DETECTION SYSTEM - SUMMARY
+========================================
+
+MLflow Tracking:
+  Experiment: /Users/user@company.com/UEBA_Detection_MLflow
+  Main Run ID: abc123def456789
+  Model Run ID: xyz789ghi012345
+  PyFunc Run ID: pqr456stu789012
+  Experiment URL: https://workspace.cloud.databricks.com/#/mlflow/experiments/123
+
+Model Registry:
+  Model Name: main.ueba_poc.ueba_anomaly_detector
+  Registry: Unity Catalog
+  Latest Version: 3
+  Status: READY
+
+Model Serving:
+  Endpoint Name: ueba-anomaly-scoring-pip
+  Endpoint URL: https://workspace.cloud.databricks.com/serving-endpoints/ueba-anomaly-scoring-pip/invocations
+  Workload: Small (scale-to-zero)
+  Status: READY
+
+Data Analysis:
+  Users Analyzed: 50
+  Total Anomalies: 23
+  Critical: 3
+  High: 8
+  ML Anomalies: 4
+
+Output Tables:
+  Findings: main.ueba_poc.detection_finding
+
+Air-gapped Deployment:
+  ✓ Libraries bundled using add_libraries_to_model()
+  ✓ No internet required during model deployment
+  ✓ All dependencies packaged in model artifact
+```
+
+### Step 3: Test Model Endpoint (MLflow version only)
+
+If you ran the MLflow-integrated notebook, test the deployed serving endpoint:
+
+```python
+from databricks.sdk import WorkspaceClient
+
+w = WorkspaceClient()
+
+# Test with sample data
+test_data = {
+    "baseline_avg_events": 150.0,
+    "baseline_std_events": 25.0,
+    "baseline_avg_bytes_out": 500000.0,
+    "baseline_std_bytes_out": 100000.0,
+    "baseline_avg_destinations": 10.0,
+    "baseline_std_destinations": 3.0,
+    "baseline_typical_start_hour": 9.0,
+    "baseline_typical_end_hour": 17.0,
+    "peer_group": 2
+}
+
+response = w.serving_endpoints.query(
+    name="ueba-anomaly-scoring-pip",
+    dataframe_records=[test_data]
+)
+
+print("Prediction:", response)
+```
+
+**Expected Response:**
+```json
+{
+  "predictions": [{
+    "user": "unknown",
+    "is_anomaly": 0,
+    "anomaly_score": -0.123,
+    "risk_score": 0.234,
+    "risk_level": "LOW",
+    "peer_group": 2
+  }]
+}
+```
+
+### Step 4: Review Detection Findings
 
 Query the detection findings table:
 
@@ -514,7 +830,7 @@ WHERE severity IN ('CRITICAL', 'HIGH')
 ORDER BY risk_score DESC;
 ```
 
-### Step 4: Investigate High-Risk Users
+### Step 5: Investigate High-Risk Users
 
 For each high-risk user, drill down into their activity:
 
